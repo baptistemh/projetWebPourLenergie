@@ -9,6 +9,7 @@
 <title>Carrousel</title>
 
 </head>
+
 <style>
 
 button {
@@ -121,14 +122,58 @@ float :right; /* Add an active/current color */
 
 .container {
  width:100%;
-  display: flex;
-    align-items: flex-end;
+  
+    margin: 40px auto;
+		overflow: auto;
 }
 .class {
  width:12,5%;
   float : left;
 
 }
+
+
+
+	.slider-inner{
+		width: 500px;
+		height: 300px;
+		position: relative;
+		overflow: hidden;
+		float: left;
+		padding: 3px;
+		border: #666 solid 1px;
+
+	}
+
+	.slider-inner img{
+		display: none;
+		width: 500px;
+		height: 300px;
+	}
+	
+	.slider-inner img.active{
+		display: inline-block;
+	}
+
+	.prev,.next{
+		float: left;
+		margin-top: 130px;
+		cursor: pointer;
+	}
+
+	.prev{
+		position: relative;
+		margin-right: -45px;
+		z-index: 100;
+		
+	}
+
+	.next{
+		position: relative;
+		margin-left: -45px;
+		z-index: 100;
+		transform: translate(10%,13%);
+	}
 </style>
 
 
@@ -145,6 +190,48 @@ float :right; /* Add an active/current color */
 
 
 </div>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script >
+
+  $(document).ready(function(){
+  	$("#Next").click(function(){
+  		var currentImg= $('.active');
+  		var nextImg= currentImg.next();
+
+  		if(nextImg.length){
+  			currentImg.removeClass('active').css('z-index',-10);
+  			nextImg.addClass('active').css('z-index',10);
+  		}
+  	});
+
+  	$("#Previous").click(function(){
+  		var currentImg= $('.active');
+  		var prevImg= currentImg.prev();
+
+  		if(prevImg.length){
+  			currentImg.removeClass('active').css('z-index',-10);
+  			prevImg.addClass('active').css('z-index',10);
+  		}
+  	});
+  
+
+  
+ function slideImg(){
+    setTimeout(function(){ 
+    $("#Next").click();
+	slideImg(); 
+    },3000); 
+}
+
+slideImg(); 
+
+});
+
+
+
+</script>
 
 	</header>
 
@@ -175,11 +262,55 @@ float :right; /* Add an active/current color */
 	<div class="container">
 		 
    <div class="class"> 
-		      		<!--METTRE LE CARROUSEL ICI-->
+    
+    <div class="slider-outer">
+        
+        <div class="slider-inner">
+
+            <img src="charbon.jpg" class="active">
+            <img src="nucleaire.jpg">
+            <img src="eolienne.jpg">
+            <img src="gas.jpg">
+            <img src="hydrolienne.jpg">
+
+        </div>
+        
+    </div>
 
 
 </div>
-
+<div style="margin: 0 auto; display: block; background-color: black; width: 200px;">
+    <button id="Previous" style="width:100px; 
+                                float:left; 
+                                border: 0;
+                                   line-height: 2.5;
+                                padding: 0 20px;
+                                font-size: 1rem;
+                                text-align: center;
+                                color: #fff;
+                                text-shadow: 1px 1px 1px #000;
+                                border-radius: 10px;
+                                background-color: rgba(220, 0, 0, 1);
+                                background-image: linear-gradient(to top left,rgba(0, 0, 0, .2),rgba(0, 0, 0, .2) 30%,rgba(0, 0, 0, 0));
+                                box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),inset -2px -2px 3px rgba(0, 0, 0, .6);" 
+                    >Previous</button>
+    
+    <button id="Next" style="width:100px; 
+                            float:left; 
+                            border: 0;
+                               line-height: 2.5;
+                            padding: 0 20px;
+                            font-size: 1rem;
+                            text-align: center;
+                            color: #fff;
+                            text-shadow: 1px 1px 1px #000;
+                            border-radius: 10px;
+                            background-color: rgba(220, 0, 0, 1);
+                            background-image: linear-gradient(to top left,rgba(0, 0, 0, .2),rgba(0, 0, 0, .2) 30%,rgba(0, 0, 0, 0));
+                            box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),inset -2px -2px 3px rgba(0, 0, 0, .6);" 
+                    >Next</button>
+    </div>
+    
 
 </body>
 
