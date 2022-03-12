@@ -4,6 +4,14 @@ MENU BAR https://forum.alsacreations.com/topic-4-84349-1-Challenge--css-minimal-
 <!-- GOOGLE MAP https://google-map-generator.com/-->
 <!DOCTYPE html>
 
+<?php
+                session_start();
+                if($_SESSION['input2'] !== ""){
+                    $user = $_SESSION['input2'];
+                    // afficher un message
+                    echo "Bonjour $user, vous êtes connecté";
+                }
+            ?>
 
 <html>
 <main class="main">
@@ -108,14 +116,7 @@ float :right; /* Add an active/current color */
 
   <a href="#"><i class="fa fa-search"></i></a>
 
-  <?php
-                session_start();
-                if($_SESSION['input2'] !== ""){
-                     
-                    // afficher un message
-                    echo "Bonjour $reponse, vous êtes connecté";
-                }
- ?>
+  
             
 
 </div>
