@@ -111,7 +111,7 @@ float :right; /* Add an active/current color */
   <?php
                 session_start();
                 if($_SESSION['input2'] !== ""){
-                    $reponse =$conn->prepare = 'SELECT name from pageDeCo WHERE  mail="'.$_SESSION['input2'].'"';
+                     
                     // afficher un message
                     echo "Bonjour $reponse, vous êtes connecté";
                 }
