@@ -24,8 +24,8 @@ if(isset($_POST['input2']) && isset($_POST['input3']))
         $count = $reponse['count(*)'];
         if($count!=0) // nom d'utilisateur et mot de passe correctes
         {
-           $_SESSION['input2'] = $email;
-           header('Location: pageAcc.php');
+          $_SESSION['input2'] = $mail;
+          header('Location: pageAcc.php');
         }
         else
         {
