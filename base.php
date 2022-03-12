@@ -2,93 +2,50 @@
 <!DOCTYPE html>
 <html>
 <style>
- body {
-background: #D2B48C;
-display: flex;
-justify-content: center;
-color: black;
+body{
+    background: #11181C;
+}
+#box{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+}
+/* Bordered form */
+form {
+    width:100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#box h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.tpsept {
-  width: 530px;
-  height: 600;
-  border: 1px solid;
-  border-radius: 10px;
-  flex-direction: column;
-  padding: 0 50px 40px 50px;
-  background: white;
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: #11181C;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
-.debuttpsept {
-  width: 500px;
-  height: 380;
-  flex-direction: column;
-  padding: 0 10px 0 10px;
-  background: white;
-}
-.fintpsept {
-   width: 540px;
-  height: 70;
-  flex-direction: column;
-  padding: 0 10px 0 10px;
-  background: white;
-}
-
-form div {
-width: 100%;
-display: flex;
-flex-direction: column;
-margin-top: 10px;
-}
-
-form div > label {
-margin-bottom: 7px;
-font-weight: 600;
-}
-
-form div > input, form div > select {
-background: #D2B48C;
-border: none;
-border-radius: 5px;
-font-size: 16px;
-font-weight: 500;
-box-shadow: 0px 2px 2px 0px ;
-}
-
-
-form div > input::placeholder {
-color: white;
-}
-
-form div > select:invalid {
-color: white;
-}
-
-form div > select option {
-color: white;
-}
-
-form div:last-child {
-margin-top: 20px;
-}
-form div > input::checkbox {
-align-items: baseline;
-}
-.button {
-  background-color: orange;
-border-radius: 10px;
-border: 4px double #cccccc;
-color: purple;
-  margin: 10px;
-  padding: 10px;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  font-size: 15px;
-  cursor: pointer;
-}
-.button:hover {
-  background-color: yellowgreen;
-  color: blue;
+input[type=submit]:hover {
+    background-color: white;
+    color: #11181C;
+    border: 1px solid #11181C;
 }
 
 
@@ -150,30 +107,24 @@ mysqli_close($conn);
 
 ?>
 
-   <div class="tpsept">
-      <h1> Welcome to the inscription page </h1>
-   <div class="debuttpsept">
 
-  
-   <form method="post">
-<div>
-<label for="name">Your name</label>
+   <div id="box">
+            <form method="post">
+                <h1>Inscription</h1>
+
+<label>Your name</label>
 <input type="text" id="name" name="input" required>
-</div>
-<div>
-<label for="forname">Your first name</label>
+
+<label>Your first name</label>
 <input type="text" id="forname" name="input1" required>
-</div>
-<div>
-<label for="mail">Your e-mail</label>
+
+<label>Your e-mail</label>
 <input type="email" id="mail" name="input2" required>
-</div>
-<div>
-<label for="password">Your password</label>
+
+<label>Your password</label>
 <input type="password" id="password" name="input3" required>
-</div>
-<br>
-<button class="button" type="submit" name="button1" > SAVE </button>
+
+<input type="submit" id='submit' name="button1" value='SAVE' > 
 </div>
 
 </div>

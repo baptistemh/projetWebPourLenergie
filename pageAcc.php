@@ -108,6 +108,15 @@ float :right; /* Add an active/current color */
 
   <a href="#"><i class="fa fa-search"></i></a>
 
+  <?php
+                session_start();
+                if($_SESSION['mail'] !== ""){
+                    $name = $_SESSION['mail'];
+                    // afficher un message
+                    echo "Bonjour $name, vous êtes connecté";
+                }
+ ?>
+            
 
 </div>
 
