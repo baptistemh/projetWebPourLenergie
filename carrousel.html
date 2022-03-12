@@ -3,8 +3,8 @@
 
 <html>
 <main class="main">
-<head>
 
+<head>
 
 <title>Carrousel</title>
 
@@ -25,14 +25,16 @@ button {
         transition: all 0.5s;
         cursor: pointer;
         margin: 35px;
-      }
-      button span {
+}
+
+button span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
       }
-      button span:after {
+
+button span:after {
         content: "\00bb";
         position: absolute;
         opacity: 0;
@@ -40,49 +42,52 @@ button {
         right: -20px;
         transition: 0.5s;
       }
-      button:hover {
+
+button:hover {
         background-color: #81DAF5;
       }
-      button:hover span {
+
+button:hover span {
         padding-right: 25px;
       }
-      button:hover span:after {
+
+button:hover span:after {
         opacity: 1;
         right: 0;
       }
 
 .body{
-		position: relative;
-		
+	position: relative;	
 	background-color: #11181C;
 }
+
 .mapouter
 {
 		width: 300px;
 }
+
 .logo2
 {
 		width: 300px;
 }
+
 .titre {
     margin-left: auto;
     margin-right: auto;
 }
-.contenu{  
-	
+
+.contenu{  	
 background-color: #11181C;}
 
 .header{
-
 background-color: whitesmoke;
  }
 
 .footer{
-
 background-color: #11181C;
 }
-.main{
-	
+
+.main{	
 background-color: #11181C;
 }
 
@@ -177,18 +182,15 @@ overflow: auto;
 
 
 	<header class="header"  >
-		<div class="icon-bar" >
-<img class="logo" src="logo.png" width="50" height="50" >
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <a class="active" href="#">
+	<div class="icon-bar" >
+        <img class="logo" src="logo.png" width="50" height="50" >
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <a class="active" href="#">
+        <a href="#">&#9776;&nbsp;</a> <!-- CODE ASCII POUR MENU -->
+        <a href="#"><i class="fa fa-search"></i></a>
 
-  <a href="#">&#9776;&nbsp;</a> <!-- CODE ASCII POUR MENU -->
-
-  <a href="#"><i class="fa fa-search"></i></a>
-
-
-</div>
+    </div>
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
@@ -228,11 +230,9 @@ slideImg();
 
 });
 
-
-
 </script>
 
-	</header>
+</header>
 
 <!-- BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOODYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY-->
 
@@ -241,34 +241,35 @@ slideImg();
 
     <div class="but">
 
-    <button type="button1">Connection</button>
-    <button type="button2">Inscription</button>
+        <button type="button1">Connection</button>
+        <button type="button2">Inscription</button>
 
-</div>
-
-	</div>
-	<div class="container">
-		 
-   <div class="class"> 
-    
-    <div class="slider-outer">
-        
-        <div class="slider-inner">
-
-            <img src="eolienne.jpg" class="active">
-            <img src="nucleaire.jpg">
-            <img src="charbon.jpg">
-            <img src="gas.jpg">
-            <img src="hydrolienne.jpg">
-
-        </div>
-        
     </div>
 
+	
+	<div class="container">
+		 
+        <div class="class"> 
+    
+            <div class="slider-outer">
+        
+                 <div class="slider-inner">
 
-</div>
+                    <img src="eolienne.jpg" class="active">
+                    <img src="nucleaire.jpg">
+                    <img src="charbon.jpg">
+                    <img src="gas.jpg">
+                    <img src="hydrolienne.jpg">
 
-    <button id="Previous" style="width:100px; 
+                 </div>
+        
+             </div>
+
+
+        </div>
+    </div>
+
+        <button id="Previous" style="width:100px; 
                                 float:left; 
                                 border: 0;
                                    line-height: 2.5;
@@ -283,7 +284,7 @@ slideImg();
                                 box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),inset -2px -2px 3px rgba(0, 0, 0, .6);" 
                     >Previous</button>
     
-    <button id="Next" style="width:100px; 
+         <button id="Next" style="width:100px; 
                             float:left; 
                             border: 0;
                                line-height: 2.5;
@@ -297,47 +298,49 @@ slideImg();
                             background-image: linear-gradient(to top left,rgba(0, 0, 0, .2),rgba(0, 0, 0, .2) 30%,rgba(0, 0, 0, 0));
                             box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),inset -2px -2px 3px rgba(0, 0, 0, .6);" 
                     >Next</button>
-    </div>
+    
     
     <div class="contenu">
 
-
+      <br> 
+      <br> 
+      <br> 
 		<div class="titre">
 			<br> 
 			<br> 
 			<h1><font color="white"> Track your electricity consumption and production in real time</h1>
 
-		<h4><font color="white">éCO2mix is an easy-to-use tool created by RTE to help consumers better understand and consume electricity. Available free of charge on the Internet and via an application for smartphones and tablets, éCO2mix provides all the indicators of electricity consumption and production in real time, 24 hours a day, at national and regional level.</h4>
+		    <h4><font color="white">éCO2mix is an easy-to-use tool created by RTE to help consumers better 
+                understand and consume electricity. Available free of charge on the Internet and via an application 
+                for smartphones and tablets, éCO2mix provides all the indicators of electricity consumption and 
+                production in real time, 24 hours a day, at national and regional level.</h4>
 			<br> 
 			<br> 
-	</div>
+	    </div>
+    </div>
 </body>
 
-	<footer class="footer">
-<div class="Global">
-   <div class="gauche"> 
-
-    
-   
-
-<div class="mapouter">
-	<div class="gmap_canvas">
-		<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=15%20quai%20de%20grenelle&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+<footer class="footer">
+    <div class="Global">
+        <div class="gauche"> 
+            <div class="mapouter">
+	            <div class="gmap_canvas">
+		            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=15%20quai%20de%20grenelle&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
 			
-		</iframe><a href="https://123movies-to.org"></a><br>
-		<style>.mapouter{position:relative;text-align:right;height:300px;width:400px;margin-right: 200px;}</style>
-		<a href="https://www.embedgooglemap.net">embed maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;margin-right: 200px;}
-	</style>
+		            </iframe><a href="https://123movies-to.org"></a><br>
+		            <style>.mapouter{position:relative;text-align:right;height:300px;width:400px;margin-right: 200px;}</style>
+		            <a href="https://www.embedgooglemap.net">embed maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;margin-right: 200px;}
+	                </style>
 
-</div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
 
-<div class="droite">  
-	<img class="logo2" src="logo.png" width="300" height="300" >
-</div>
-</div>
-	</footer>
+        <div class="droite">  
+	        <img class="logo2" src="logo.png" width="300" height="300" >
+        </div>
+    </div>
+</footer>
 
 </main>
 </html>
