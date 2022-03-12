@@ -1,130 +1,82 @@
-<!DOCTYPE html>
 <html>
-<style>
+    <style> 
 
- body {
-background: #D2B48C;
-display: flex;
-justify-content: center;
-color: black;
+body{
+    background: #11181C;
 }
-
-.tpsept {
-  width: 530px;
-  height: 600;
-  border: 1px solid;
-  border-radius: 10px;
-  flex-direction: column;
-  padding: 0 50px 40px 50px;
-  background: white;
+#container{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
 }
-.debuttpsept {
-  width: 500px;
-  height: 380;
-  flex-direction: column;
-  padding: 0 10px 0 10px;
-  background: white;
+/* Bordered form */
+form {
+    width:100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-.fintpsept {
-   width: 540px;
-  height: 70;
-  flex-direction: column;
-  padding: 0 10px 0 10px;
-  background: white;
+#container h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
-form div {
-width: 100%;
-display: flex;
-flex-direction: column;
-margin-top: 10px;
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-form div > label {
-margin-bottom: 7px;
-font-weight: 600;
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: #11181C;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
-
-form div > input, form div > select {
-background: #D2B48C;
-border: none;
-border-radius: 5px;
-font-size: 16px;
-font-weight: 500;
-box-shadow: 0px 2px 2px 0px ;
-}
-
-
-form div > input::placeholder {
-color: white;
-}
-
-form div > select:invalid {
-color: white;
-}
-
-form div > select option {
-color: white;
-}
-
-form div:last-child {
-margin-top: 20px;
-}
-form div > input::checkbox {
-align-items: baseline;
-}
-.button {
-  background-color: orange;
-border-radius: 10px;
-border: 4px double #cccccc;
-color: purple;
-  margin: 10px;
-  padding: 10px;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  font-size: 15px;
-  cursor: pointer;
-}
-.button:hover {
-  background-color: yellowgreen;
-  color: blue;
+input[type=submit]:hover {
+    background-color: white;
+    color: #11181C;
+    border: 1px solid #11181C;
 }
 
 </style>
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <title>Page de connexion</title>
-
-</head>
-
-<body>
-
-<div class="tpsept">
-      <h1> Welcome to the connexion page </h1>
-   <div class="debuttpsept">
-
-  
-   <form method="post">
-
-<label for="mail">Your e-mail</label>
-<input type="email" id="mail" name="input2" required>
-</div>
-<div>
-<label for="password">Your password</label>
-<input type="password" id="password" name="input3" required>
-</div>
-<br>
-<button class="button" type="submit" name="button1" > CONNECT </button>
-</div>
-
-</div>
-</form>
 
 
-</body>
+    <head>
+       <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="container">
+            <!-- zone de connexion -->
+            
+            <form action="verif.php" method="POST">
+                <h1>Connexion</h1>
+                
+                <label><b>E-mail</b></label>
+                <input type="text" placeholder="Enter your e-mail" name="input2" required>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" name="input3" required>
+
+                <input type="submit" id='submit' value='LOGIN' >
+                <?php
+                if(isset($_GET['erreur'])){
+                    $err = $_GET['erreur'];
+                    if($err==1 || $err==2)
+                        echo "<p style='color:red'>E-mail or password incorrect</p>";
+                }
+                ?>
+            </form>
+        </div>
+    </body>
 </html>
