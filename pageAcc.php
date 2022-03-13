@@ -7,9 +7,13 @@ MENU BAR https://forum.alsacreations.com/topic-4-84349-1-Challenge--css-minimal-
 <?php
                 session_start();
                 if($_SESSION['input2'] !== ""){
-                    $user = $_SESSION['input2'];
+                    $user = $_SESSION['name'];
+					$userforname = $_SESSION['forname'];
+					$conso21 = $_SESSION['conso21'];
+					$conso20 = $_SESSION['conso20'];
                     // afficher un message
-                    echo "Bonjour $user, vous êtes connecté";
+                    echo "Bonjour $user , vous êtes connecté ton nom est $userforname ";
+					echo "Conso 2021 est  $conso21 et pour 2020 $conso20 ";
                 }
             ?>
 

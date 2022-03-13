@@ -24,7 +24,17 @@ if(isset($_POST['input2']) && isset($_POST['input3']))
         $count = $reponse['count(*)'];
         if($count!=0) // nom d'utilisateur et mot de passe correctes
         {
-          $_SESSION['input2'] = $mail;
+          $_SESSION['input2'] = $email;
+          $requete2 = "SELECT * FROM pageDeCo where mail = '".$email."' ";
+          $exec_requete2 = mysqli_query($conn,$requete2);
+          $reponse2     = mysqli_fetch_object($exec_requete2);
+          $requete3 = "SELECT * FROM consoEner where mail = '".$email."' ";
+          $exec_requete3 = mysqli_query($conn,$requete3);
+          $reponse3     = mysqli_fetch_object($exec_requete3);
+          $_SESSION['name'] = $reponse2->name;
+          $_SESSION['forname'] = $reponse2->forname;
+          $_SESSION['conso21'] = $reponse3->conso21;
+          $_SESSION['conso20'] = $reponse3->conso20;
           header('Location: pageAcc.php');
         }
         else
