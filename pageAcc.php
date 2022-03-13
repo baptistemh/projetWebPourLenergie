@@ -116,7 +116,7 @@ float :right; /* Add an active/current color */
 					$conso21 = $_SESSION['conso21'];
 					$conso20 = $_SESSION['conso20'];
                     // afficher un message
-                    echo '<h6 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes connecté à votre compte ! </h6>';
+                    echo '<h2 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes connecté à votre compte ! </h2>';
 					
                 }
             ?>
@@ -133,9 +133,8 @@ float :right; /* Add an active/current color */
 			<br> 
 			<br> 
 			<h5><font color="white"> Accueil
- éCO2mix - Toutes les données de l'électricité en temps réel</h5>
-
-		<h1><font color="white"> ÉCO2mix - Toutes les données de l'électricité en temps réel</h1>
+ éCO2mix - Toutes les données de l'électricité en temps réel</h5> 
+		<h1><font color="white"> ÉCO2mix - Toutes les données de l'électricité en temps réel</h1> 
 			<br> 
 			<br> 
 	</div>
@@ -144,7 +143,7 @@ float :right; /* Add an active/current color */
 	<div class="container">
 		 
    <div class="class"> 
-		      		<img src="9.png" width="170" height="170" >
+		      		<img src="9.png" width="170" height="170" onclick="window.location.href = 'infoConso.php';">
 		   </div>
 		      <div class="class"> 
 		      		<img src="2.png" width="170" height="170" >
