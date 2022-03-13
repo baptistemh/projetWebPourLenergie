@@ -178,6 +178,96 @@ overflow: auto;
 		z-index: 100;
 		transform: translate(10%,13%);
 	}
+
+  @keyframes flash {  
+        0% {
+            color: rgb(135, 206, 235);
+            text-shadow: 1px 5px 20px black;
+        }
+        90% {
+            color: blue;
+            text-shadow: 1px 5px 20px black;
+        }
+        100% {
+            color: #FF8F00;
+            text-shadow: 0 0 20px #FF8F00, 0 0 50px #FF8F00;
+        }
+    }
+
+.gallery:hover{
+    color:#FF8F00;
+    padding: 1px;
+    background-color: #FF8F00;
+    border-radius: 9px;
+
+}
+
+.gallery {
+        position: absolute;
+        font-family: 'impact';
+        top: 4%;
+        left: 11%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        text-shadow: 1px 5px 20px black;
+    }
+    
+    .gallery li {
+        list-style: none;
+        font-family: 'impact';
+        color: white;
+        letter-spacing: 1px;
+        font-size: 2.3rem;
+        font-weight: bolder;
+        animation: flash 2s linear infinite;
+    }
+    
+ 
+    .gallery li:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+    
+    .gallery li:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+    
+    .gallery li:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    .gallery li:nth-child(4) {
+        animation-delay: 0.5s;
+    }
+    
+    .gallery li:nth-child(5) {
+        animation-delay: 0.6s;
+    }
+    
+    .gallery li:nth-child(6) {
+        animation-delay: 0.7s;
+    }
+    .gallery li:nth-child(7) {
+        animation-delay: 0.8s;
+    }
+    .gallery li:nth-child(8) {
+        animation-delay: 0.9s;
+    }
+    
+    .gallery li:nth-child(9) {
+        animation-delay: 1.0s;
+    }
+    .gallery li:nth-child(10) {
+        animation-delay: 1.1s;
+    }
+    .gallery li:nth-child(11) {
+        animation-delay: 1.2s;
+    }
+    .gallery li:nth-child(12) {
+        animation-delay: 1.3s;
+    }
+
+
 </style>
 
 
@@ -234,18 +324,41 @@ slideImg();
 
 </header>
 
-<!-- BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOODYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY-->
+<!-- BODY-->
+
+
+<section class="first">
+  <div class="second">
+    <div class="content">
+      <div class="carousel">
+            <div class="slide">
+                <ul class="gallery">
+                    <li>P</li>
+                    <li>O</li>
+                    <li>W</li>
+                    <li>E</li>
+                    <li>R</li>
+                    <li>R</li>
+                    <li>A</li>
+                    <li>N</li>
+                    <li>G</li>
+                    <li>E</li>
+                    <li>R</li>
+                    <li>S</li>
+                </ul>
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <body class="body" >
 	
 
     <div class="but">
 
-
-
     <button onclick="window.location.href = 'connexion.php';" type="button1">Connection</button>
     <button onclick="window.location.href = 'base.php';" type="button2">Inscription</button>
-
 
     </div>
 
@@ -275,7 +388,7 @@ slideImg();
         <button id="Previous" style="width:100px; 
                                 float:left; 
                                 border: 0;
-                                   line-height: 2.5;
+                                line-height: 2.5;
                                 padding: 0 20px;
                                 font-size: 1rem;
                                 text-align: center;
@@ -313,7 +426,7 @@ slideImg();
 			<br> 
 			<h1><font color="white"> Track your electricity consumption and production in real time</h1>
 
-		    <h4><font color="white">éCO2mix is an easy-to-use tool created by RTE to help consumers better 
+		    <h4><font color="white">ECO2mix is an easy-to-use tool created by RTE to help consumers better 
                 understand and consume electricity. Available free of charge on the Internet and via an application 
                 for smartphones and tablets, éCO2mix provides all the indicators of electricity consumption and 
                 production in real time, 24 hours a day, at national and regional level.</h4>
