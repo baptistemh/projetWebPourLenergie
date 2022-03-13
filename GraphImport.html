@@ -1,0 +1,212 @@
+
+<!-- PIGUET MAHIEU REGNIER TP4 S2 WEB DEV-->
+
+<!-- https://developers.google.com/chart/interactive/docs/gallery/geochart?hl=fr
+https://www.connaissancedesenergies.org/questions-et-reponses-energies/pourquoi-la-france-importe-t-elle-de-lelectricite-alors-que-sa-production-est-excedentaire-->
+<!DOCTYPE html>
+
+<?php
+                session_start();
+                if($_SESSION['input2'] !== ""){
+                    $user = $_SESSION['name'];
+          $userforname = $_SESSION['forname'];
+          $conso21 = $_SESSION['conso21'];
+          $conso20 = $_SESSION['conso20'];
+                    // afficher un message
+                    echo "Bonjour $user , vous êtes connecté ton nom est $userforname ";
+          echo "Conso 2021 est  $conso21 et pour 2020 $conso20 ";
+                }
+            ?>
+
+<html>
+<main class="main">
+<head>
+
+
+<title>TP4</title>
+
+</head>
+<style>
+
+.body{
+    position: relative;
+    
+  background-color: #11181C;
+}
+.mapouter
+{
+    width: 300px;
+}
+.logo2
+{
+    width: 300px;
+}
+.titre {
+    margin-left: auto;
+    margin-right: auto;
+}
+.contenu{  
+  
+background-color: #11181C;}
+
+.header{
+
+background-color: whitesmoke;
+ }
+
+.footer{
+
+background-color: #11181C;
+}
+.main{
+  
+background-color: #11181C;
+}
+
+/* SEARCH BAR */
+.icon-bar {
+  width: 100%; 
+  background-color: #11181C; 
+  overflow: auto; /* Overflow due to float */
+
+}
+
+.icon-bar a {
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+float : right;
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+.active {
+  background-color: #04AA6D; /* Add an active/current color */
+}
+
+a {
+  margin: 20px;
+}
+.Global{
+  width:100%;
+}
+.gauche {
+float :left; /* Add an active/current color */
+}
+.droite {
+float :right; /* Add an active/current color */
+}
+
+.container {
+ width:100%;
+  display: flex;
+    align-items: flex-end;
+}
+.class {
+ width:12,5%;
+  float : left;
+
+}
+
+.graph {
+  background-color: #11181C; 
+}
+h1 {
+    text-align:center;
+      color: white;
+}
+.maps {
+   margin: 0 auto;
+     width: 66%; }
+</style>
+
+
+  <header class="header"  >
+    <div class="icon-bar" >
+<img class="logo" src="logo.png" width="50" height="50" >
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <a class="active" href="#">
+
+  <a href="#">&#9776;&nbsp;</a> <!-- CODE ASCII POUR MENU -->
+
+  <a href="#"><i class="fa fa-search"></i></a>
+
+  
+            
+
+</div>
+
+  </header>
+<div>
+  <h1>IMPORTATION IN FRANCE IN MWH</h1>
+  <br><br><br><br>
+  <html>
+
+<div class="maps">
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Popularity'],
+          ['United Kingdom', 800],   
+          ['Spain', 2900],
+          ['Belgium', 800],
+          ['Germany', 13200], 
+          ['Switzerland', 9100],
+          ['Italia', 500]
+
+        ]);
+
+        var options = {
+                      backgroundColor:'#11181C',
+               colors: ['#ffcc00', '#ff6600'],
+               region: '150', // Only Europe
+
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
+    <body>
+      <div id="chart_div" style="width: 100%; height: 500px;  "></div>
+    </body>
+ </div>
+
+<div class="mapouter">
+  <div class="gmap_canvas">
+    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=15%20quai%20de%20grenelle&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+      
+    </iframe><a href="https://123movies-to.org"></a><br>
+    <style>.mapouter{position:relative;text-align:right;height:300px;width:400px;margin-right: 200px;}</style>
+    <a href="https://www.embedgooglemap.net">embed maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;margin-right: 200px;}
+  </style>
+
+</div>
+</div>
+</div>
+
+<div class="droite">  
+  <img class="logo2" src="logo.png" width="300" height="300" >
+</div>
+</div>
+  </footer>
+
+</main>
+</html>
+
+
+
