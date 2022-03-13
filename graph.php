@@ -127,6 +127,7 @@ float :right; /* Add an active/current color */
 	</header>
 <div>
 
+<html>
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -135,23 +136,24 @@ float :right; /* Add an active/current color */
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Months', 'Consommation'],
-          ['January',      400],
-          ['February',      460],
-          ['March',       1120],
-          ['April',      540] 
-          ['May',      400],
-          ['June',      460],
-          ['July',       1120],
-          ['August',      540]
-          ['September',      400],
-          ['October',      460],
-          ['Decmber',       1120],
+          ['Months', 'Expenses'],
+          ['January',     400],
+          ['February',     460],
+          ['March',      1120],
+          ['April',     540],
+           ['May',     400],
+          ['June',     460],
+          ['July',      1120],
+           ['August',     400],
+          ['September',     460],
+          ['October',      1120],
+          ['November',     460],
+          ['December',     460]
         ]);
 
         var options = {
-          title: 'Personnal Consommation',
-          hAxis: {title: 'Consommation',  titleTextStyle: {color: '#333'}},
+          title: 'Personal Consommation',
+          hAxis: {title: 'Consommation by months',  titleTextStyle: {color: '#00536D'}},
           vAxis: {minValue: 0}
         };
 
@@ -163,7 +165,7 @@ float :right; /* Add an active/current color */
   <body>
     <div id="chart_div" style="width: 100%; height: 500px;"></div>
   </body>
-
+</html>
 
 	<footer class="footer">
 <div class="Global">
