@@ -4,18 +4,6 @@ MENU BAR https://forum.alsacreations.com/topic-4-84349-1-Challenge--css-minimal-
 <!-- GOOGLE MAP https://google-map-generator.com/-->
 <!DOCTYPE html>
 
-<?php
-                session_start();
-                if($_SESSION['input2'] !== ""){
-                    $user = $_SESSION['name'];
-					$userforname = $_SESSION['forname'];
-					$conso21 = $_SESSION['conso21'];
-					$conso20 = $_SESSION['conso20'];
-                    // afficher un message
-                    echo "Bonjour $user , vous êtes connecté ton nom est $userforname ";
-					echo "Conso 2021 est  $conso21 et pour 2020 $conso20 ";
-                }
-            ?>
 
 <html>
 <main class="main">
@@ -120,7 +108,18 @@ float :right; /* Add an active/current color */
 
   <a href="#"><i class="fa fa-search"></i></a>
 
-  
+  <?php
+                session_start();
+                if($_SESSION['input2'] !== ""){
+                    $user = $_SESSION['name'];
+					$userforname = $_SESSION['forname'];
+					$conso21 = $_SESSION['conso21'];
+					$conso20 = $_SESSION['conso20'];
+                    // afficher un message
+                    echo '<h6 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes connecté à votre compte ! </h6>';
+					
+                }
+            ?>
             
 
 </div>
