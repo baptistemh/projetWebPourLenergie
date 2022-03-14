@@ -3,19 +3,6 @@
 <!-- https://developers.google.com/chart/interactive/docs/gallery/areachart?hl=fr-->
 <!DOCTYPE html>
 
-<?php
-                session_start();
-                if($_SESSION['input2'] !== ""){
-                    $user = $_SESSION['name'];
-					$userforname = $_SESSION['forname'];
-					$conso21 = $_SESSION['conso21'];
-					$conso20 = $_SESSION['conso20'];
-                    // afficher un message
-                    echo "Bonjour $user , vous êtes connecté ton nom est $userforname ";
-					echo "Conso 2021 est  $conso21 et pour 2020 $conso20 ";
-                }
-            ?>
-
 <html>
 <main class="main">
 <head>
@@ -123,10 +110,33 @@ float :right; /* Add an active/current color */
 
   <a href="#"><i class="fa fa-search"></i></a>
 
-  
+  <?php
+                session_start();
+                if($_SESSION['input2'] !== ""){
+                    $user = $_SESSION['name'];
+					          $userforname = $_SESSION['forname'];
+                    $password = $_SESSION['password'];
+                    $consoJanvier = $_SESSION['consoJanvier'];
+                    $consoFevrier = $_SESSION['consoFevrier'];
+                    $consoMars = $_SESSION['consoMars'];
+                    $consoAvril = $_SESSION['consoAvril'];
+                    $consoMai = $_SESSION['consoMai'];
+                    $consoJuin = $_SESSION['consoJuin'];
+                    $consoJuillet = $_SESSION['consoJuillet'];
+                    $consoAout = $_SESSION['consoAout'];
+                    $consoSeptembre = $_SESSION['consoSeptembre'];
+                    $consoOctobre = $_SESSION['consoOctobre'];
+                    $consoNovembre = $_SESSION['consoNovembre'];
+                    $consoDecembre = $_SESSION['consoDecembre'];
+                    // afficher un message
+                    echo '<h1 style="text-align: center; color: white";> Bonjour '.$user. ', voici votre graphique de consommation annuelle ! </h1>';
+					
+                }
+            ?>
             
 
 </div>
+
 
 	</header>
 <div>
@@ -142,18 +152,18 @@ float :right; /* Add an active/current color */
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Months', 'Expenses'],
-          ['January',     400],
-          ['February',     460],
-          ['March',      1120],
-          ['April',     540],
-           ['May',     400],
-          ['June',     460],
-          ['July',      1120],
-           ['August',     400],
-          ['September',     460],
-          ['October',      1120],
-          ['November',     460],
-          ['December',     460]
+          ['January',     <?php echo $consoJanvier; ?> ],
+          ['February',     <?php echo $consoFevrier; ?>],
+          ['March',      <?php echo $consoMars; ?>],
+          ['April',     <?php echo $consoAvril; ?>],
+           ['May',     <?php echo $consoMai; ?>],
+          ['June',     <?php echo $consoJuin; ?>],
+          ['July',      <?php echo $consoJuillet; ?>],
+           ['August',     <?php echo $consoAout; ?>],
+          ['September',     <?php echo $consoSeptembre; ?>],
+          ['October',      <?php echo $consoOctobre; ?>],
+          ['November',     <?php echo $consoNovembre; ?>],
+          ['December',     <?php echo $consoDecembre; ?>]
         ]);
 
         var options = {
