@@ -28,13 +28,21 @@ if(isset($_POST['input2']) && isset($_POST['input3']))
           $requete2 = "SELECT * FROM pageDeCo where mail = '".$email."' ";
           $exec_requete2 = mysqli_query($conn,$requete2);
           $reponse2     = mysqli_fetch_object($exec_requete2);
-          $requete3 = "SELECT * FROM consoEner where mail = '".$email."' ";
-          $exec_requete3 = mysqli_query($conn,$requete3);
-          $reponse3     = mysqli_fetch_object($exec_requete3);
           $_SESSION['name'] = $reponse2->name;
           $_SESSION['forname'] = $reponse2->forname;
-          $_SESSION['conso21'] = $reponse3->conso21;
-          $_SESSION['conso20'] = $reponse3->conso20;
+          $_SESSION['password'] = $reponse2->password;
+          $_SESSION['consoJanvier'] = $reponse2->consoJanvier;
+          $_SESSION['consoFevrier'] = $reponse2->consoFevrier;
+          $_SESSION['consoMars'] = $reponse2->consoMars;
+          $_SESSION['consoAvril'] = $reponse2->consoAvril;
+          $_SESSION['consoMai'] = $reponse2->consoMai;
+          $_SESSION['consoJuin'] = $reponse2->consoJuin;
+          $_SESSION['consoJuillet'] = $reponse2->consoJuillet;
+          $_SESSION['consoAout'] = $reponse2->consoAout;
+          $_SESSION['consoSeptembre'] = $reponse2->consoSeptembre;
+          $_SESSION['consoOctobre'] = $reponse2->consoOctobre;
+          $_SESSION['consoNovembre'] = $reponse2->consoNovembre;
+          $_SESSION['consoDecembre'] = $reponse2->consoDecembre;
           header('Location: pageAcc.php');
         }
         else
