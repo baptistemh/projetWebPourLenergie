@@ -56,6 +56,62 @@ input[type=submit]:hover {
        <meta charset="utf-8">
     </head>
     <body>
+
+    <?php
+    session_start();
+
+    if($_SESSION['input2'] !== ""){
+        $user = $_SESSION['name'];
+        // afficher un message
+        echo '<h2 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes sur votre espace CONSO ! </h2>';
+        
+    }
+
+$email = $_SESSION['input2'];
+
+$consoJanvier = $_POST["consoJanvier"];
+$consoFevrier = $_POST["consoFevrier"];
+$consoMars = $_POST["consoMars"];
+$consoAvril = $_POST["consoAvril"];
+$consoMai = $_POST["consoMai"];
+$consoJuin = $_POST["consoJuin"];
+$consoJuillet = $_POST["consoJuillet"];
+$consoAout = $_POST["consoAout"];
+$consoSeptembre = $_POST["consoSeptembre"];
+$consoOctobre = $_POST["consoOctobre"];
+$consoNovembre = $_POST["consoNovembre"];
+$consoDecembre = $_POST["consoDecembre"];
+
+
+
+
+$conn = mysqli_connect("localhost", "root", "root", "connexion");
+
+if (!$conn) {
+    die("Échec de la connexion : " . mysqli_connect_error());
+}
+
+echo "Connexion réussie"."<br/>";
+echo '<h4 color: red";> L email est bien '.$email. ', merci ! </h4>';
+
+$sql = "SELECT consoJanvier, consoFevrier, consoMars, consoAvril, consoMai, consoJuin, consoJuillet, consoAout, consoSeptembre, consoOctobre, consoNovembre, consoDecembre from pageDeCo";
+
+if($_POST['button1']){
+
+    $sql = "UPDATE pageDeCo SET consoJanvier = '$consoJanvier', consoFevrier = '$consoFevrier', consoMars = '$consoMars', consoAvril = '$consoAvril', consoMai = '$consoMai', consoJuin = '$consoJuin', consoJuillet = '$consoJuillet', consoAout = '$consoAout', consoSeptembre = '$consoSeptembre', consoOctobre = '$consoOctobre', consoNovembre = '$consoNovembre', consoDecembre = '$consoDecembre' where mail = '".$email."' ";
+    if (mysqli_query($conn, $sql)) {
+      echo "Nouveau enregistrement créé avec succès";
+      $sql = "SELECT consoJanvier, consoFevrier, consoMars, consoAvril, consoMai, consoJuin, consoJuillet, consoAout, consoSeptembre, consoOctobre, consoNovembre, consoDecembre from pageDeCo";
+} else {
+      echo "Erreur : " . $sql . "<br>" . mysqli_error($conn);
+}
+}
+
+
+mysqli_close($conn);
+
+?>
+
         <div id="container">
             <!-- zone de connexion -->
             
@@ -71,7 +127,7 @@ input[type=submit]:hover {
                 <label><b>Consommation du mois de Mars (en MW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoMars" required>
 
-                <label><b>Consommation du mois de Avril (en MW)</b></label>
+                <label><b>Consommation du mois d'Avril (en MW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoAvril" required>
 
                 <label><b>Consommation du mois de Mai (en MW)</b></label>
@@ -83,7 +139,7 @@ input[type=submit]:hover {
                 <label><b>Consommation du mois de Juillet (en MW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoJuillet" required>
 
-                <label><b>Consommation du mois de Août (en MW)</b></label>
+                <label><b>Consommation du mois d'Aout (en MW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoAout" required>
 
                 <label><b>Consommation du mois de Septembre (en MW)</b></label>
