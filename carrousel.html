@@ -105,6 +105,7 @@ background-color: whitesmoke;
 
 .footer{
 background-color: #11181C;
+border-top: 2px solid #ffffff;
 }
 
 .main{	
@@ -141,9 +142,14 @@ a {
 .gauche {
 float :left; /* Add an active/current color */
 }
-.droite {
-float :right; /* Add an active/current color */
-}
+
+.conteneur {overflow:hidden;
+            color:#04AA6D;
+            font-family: sans-serif;
+            font-style: italic;
+          }
+
+.colp {width:33.3%; float:left; display:inline}
 
 .container {
  width:50%;
@@ -156,9 +162,6 @@ overflow: auto;
   float : left;
 
 }
-
-
-
 	.slider-inner{
 		width: 500px;
 		height: 300px;
@@ -443,17 +446,46 @@ slideImg();
 		            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=15%20quai%20de%20grenelle&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
 			
 		            </iframe><a href="https://123movies-to.org"></a><br>
-		            <style>.mapouter{position:relative;text-align:right;height:300px;width:400px;margin-right: 200px;}</style>
-		            <a href="https://www.embedgooglemap.net">embed maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;margin-right: 200px;}
+		            <style>.mapouter{position:relative;text-align:right;height:150px;width:350px;margin-right: 200px;}</style>
+		            <a href="https://www.embedgooglemap.net">embed maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:150px;width:350px;margin-right: 200px;}
 	                </style>
 
                 </div>
             </div>
         </div>
 
-        <div class="droite">  
-	        <img class="logo2" src="logo.png" width="300" height="300" >
+        <div class="conteneur">
+          <p class="colp">
+            About us
+            <br>
+            <br>
+            <br>
+            Who are we?
+            <br>
+            <br>
+            Contact
+            </p>
+          <p class="colp">
+            Other
+            <br>
+            <br>
+            <br>
+            Confidentiality politics
+            <br>
+            <br>
+            Legal mentions
+          </p>
+          <p class="colp">
+            Social Networks
+            <br>
+            <br>
+            <img src="linkedin.png" width="120" height="30" >
+            <br>
+            <img src="fb.jpg" width="120" height="60" >
+          </p>
         </div>
+
+        
     </div>
 </footer>
 
