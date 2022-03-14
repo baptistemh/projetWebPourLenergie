@@ -146,7 +146,7 @@ float :right; /* Add an active/current color */
 		      		<img src="9.png" width="170" height="170" onclick="window.location.href = 'infoConso.php';">
 		   </div>
 		      <div class="class"> 
-		      		<img src="2.png" width="170" height="170" >
+		      		<img src="2.png" width="170" height="170" onclick="window.location.href = 'graph.php';" >
 		   </div>
 		      <div class="class"> 
 		      	<img src="3.png" width="170" height="170" >
