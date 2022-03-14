@@ -105,6 +105,10 @@ float :right; /* Add an active/current color */
   float : left;
 
 }
+
+.graph {
+  background-color: #11181C; 
+}
 </style>
 
 
@@ -129,6 +133,7 @@ float :right; /* Add an active/current color */
 
 <html>
   <head>
+  <div class="graph">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -152,15 +157,27 @@ float :right; /* Add an active/current color */
         ]);
 
         var options = {
-          title: 'Personal Consommation',
-          hAxis: {title: 'Consommation by months',  titleTextStyle: {color: '#00536D'}},
-          vAxis: {minValue: 0}
+          title: 'Personal Consommation',titleTextStyle: {color: 'white'},
+            hAxis: {title: 'Consommation by months',  textStyle: {color: 'white'},titleTextStyle: {color: 'white'}},
+  
+  
+  
+            vAxis: {minValue: 0,textStyle: {color: 'white'},titleTextStyle: {color: 'white'} },
+    series: {
+              0: { lineWidth: 1 }, // change colour of the curve
+              
+            },
+            colors: ['#00536D'],
+  legend: {textStyle: {color: 'white', fontSize: 16}},
+            backgroundColor:'#11181C',
+  
         };
 
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
     </script>
+    </div>
   </head>
   <body>
     <div id="chart_div" style="width: 100%; height: 500px;"></div>
