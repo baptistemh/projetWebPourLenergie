@@ -93,7 +93,7 @@ if(mysqli_num_rows($select)) {
 }
 }
 else{
-$sql = "INSERT INTO pageDeCo (name, forname, mail, password) VALUES ('$name', '$forname', '$mail', '$password')";
+$sql = "INSERT INTO pageDeCo (name, forname, mail, password) VALUES ('$name', '$forname', '$mail', '$password') ";
 if (mysqli_query($conn, $sql)) {
       echo "Nouveau enregistrement créé avec succès";
       $sql = "SELECT name, forname, mail, password from pageDeCo";
