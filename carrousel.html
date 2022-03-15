@@ -354,8 +354,9 @@ overflow: auto;
 
         <div class="wrap">
           <div class="search">
-             <input type="text" class="searchTerm" placeholder="What are you looking for?">
-             <button type="submit" class="searchButton">
+             <input type="text" id="text_a" class="searchTerm"  placeholder="What are you looking for?" onclick="myFunction1()" >
+             <button type="submit" class="searchButton" onclick="myFunction1()"> 
+              
                <i class="fa fa-search"></i>
             </button>
           </div>
@@ -364,14 +365,6 @@ overflow: auto;
        
     </div>
 
-    <div class="wrap">
-      <div class="search">
-         <input type="text" class="searchTerm" placeholder="What are you looking for?">
-         <button type="submit" class="searchButton">
-           <i class="fa fa-search"></i>
-        </button>
-      </div>
-   </div>
 
    
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -569,3 +562,19 @@ slideImg();
 
 
 
+<script>
+  function myFunction1()
+  {
+  var a=document.getElementById("text_a").value;
+  
+  if (a=="importation")
+    {
+   window.open("GraphExport.html");
+    }
+  else
+    {
+    }
+  }
+  </script>
+  
+  
