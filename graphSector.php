@@ -4,19 +4,6 @@
 https://developers.google.com/chart/interactive/docs/gallery/histogram-->
 <!DOCTYPE html>
 
-<?php
-                session_start();
-                if($_SESSION['input2'] !== ""){
-                    $user = $_SESSION['name'];
-          $userforname = $_SESSION['forname'];
-          $conso21 = $_SESSION['conso21'];
-          $conso20 = $_SESSION['conso20'];
-                    // afficher un message
-                    echo "Bonjour $user , vous êtes connecté ton nom est $userforname ";
-          echo "Conso 2021 est  $conso21 et pour 2020 $conso20 ";
-                }
-            ?>
-
 <html>
 <main class="main">
 <head>
@@ -126,7 +113,31 @@ float :right; /* Add an active/current color */
 
   <a href="#"><i class="fa fa-search"></i></a>
 
-  
+  <?php
+                session_start();
+                if($_SESSION['input2'] !== ""){
+                    $user = $_SESSION['name'];
+					          $userforname = $_SESSION['forname'];
+                    $password = $_SESSION['password'];
+                    $consoJanvier = $_SESSION['consoJanvier'];
+                    $consoFevrier = $_SESSION['consoFevrier'];
+                    $consoMars = $_SESSION['consoMars'];
+                    $consoAvril = $_SESSION['consoAvril'];
+                    $consoMai = $_SESSION['consoMai'];
+                    $consoJuin = $_SESSION['consoJuin'];
+                    $consoJuillet = $_SESSION['consoJuillet'];
+                    $consoAout = $_SESSION['consoAout'];
+                    $consoSeptembre = $_SESSION['consoSeptembre'];
+                    $consoOctobre = $_SESSION['consoOctobre'];
+                    $consoNovembre = $_SESSION['consoNovembre'];
+                    $consoDecembre = $_SESSION['consoDecembre'];
+                    $sommeConso = $consoDecembre + $consoNovembre;
+                    // afficher un message
+                    echo '<h1 style="text-align: center; color: white";> Bonjour '.$user. ', voici votre graphique de consommation annuelle ! </h1>';
+                    echo '<h1 style="text-align: center; color: white";> Le calcul donne '.$user. ' ! </h1>';
+					
+                }
+            ?>
             
 
 </div>
