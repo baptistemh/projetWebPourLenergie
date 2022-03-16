@@ -131,10 +131,10 @@ float :right; /* Add an active/current color */
                     $consoOctobre = $_SESSION['consoOctobre'];
                     $consoNovembre = $_SESSION['consoNovembre'];
                     $consoDecembre = $_SESSION['consoDecembre'];
-                    $sommeConso = $consoDecembre + $consoNovembre;
+                    $sommeConso = $consoDecembre + $consoNovembre + $consoOctobre +$consoSeptembre + $consoAout +$consoJuillet + $consoJuin +$consoMai + $consoAvril +$consoMars + $consoFevrier + $consoJanvier;
                     // afficher un message
                     echo '<h1 style="text-align: center; color: white";> Bonjour '.$user. ', voici votre graphique de consommation annuelle ! </h1>';
-                    echo '<h1 style="text-align: center; color: white";> Le calcul donne '.$user. ' ! </h1>';
+                    echo '<h1 style="text-align: center; color: white";> Le calcul donne '.$sommeConso. ' ! </h1>';
 					
                 }
             ?>
