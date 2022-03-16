@@ -113,16 +113,26 @@ float :right; /* Add an active/current color */
                 if($_SESSION['input2'] !== ""){
                     $user = $_SESSION['name'];
 					$userforname = $_SESSION['forname'];
-					$conso21 = $_SESSION['conso21'];
-					$conso20 = $_SESSION['conso20'];
+					$consoJanvier = $_SESSION['consoJanvier'];
                     // afficher un message
-                    echo '<h2 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes connecté à votre compte ! </h2>';
+                    echo '<h2 style="text-align: center; color: white";> Bonjour '.$consoJanvier. ', vous êtes connecté à votre compte ! </h2>';
 					
                 }
             ?>
             
 
 </div>
+
+<script>  
+function redirection() {
+if (<?php echo $consoJanvier; ?> != "0") { 
+	location.href = 'graph.php';
+} 
+else {
+	location.href = 'infoConso.php';
+}
+}  
+</script>
 
 	</header>
 <body class="body" >
@@ -143,13 +153,13 @@ float :right; /* Add an active/current color */
 	<div class="container">
 		 
    <div class="class"> 
-		      		<img src="9.png" width="170" height="170" onclick="window.location.href = 'infoConso.php';">
+		      		<img src="9.png" width="170" height="170" onclick="redirection()">
 		   </div>
 		      <div class="class"> 
 		      		<img src="2.png" width="170" height="170" onclick="window.location.href = 'graph.php';" >
 		   </div>
 		      <div class="class"> 
-		      	<img src="3.png" width="170" height="170" >
+		      	<img src="3.png" width="170" height="170" onclick="window.location.href = 'graphSector.php';">
 		   </div>
 		      <div class="class"> 
 		      	<img src="4.png" width="170" height="170" >
