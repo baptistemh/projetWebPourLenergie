@@ -104,7 +104,7 @@ float :right; /* Add an active/current color */
 
   <header class="header"  >
     <div class="icon-bar" >
-<img class="logo" src="logo.png" width="50" height="50" >
+<img class="logo" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <a class="active" href="#">
@@ -134,7 +134,7 @@ float :right; /* Add an active/current color */
                     $sommeConso = $consoDecembre + $consoNovembre + $consoOctobre +$consoSeptembre + $consoAout +$consoJuillet + $consoJuin +$consoMai + $consoAvril +$consoMars + $consoFevrier + $consoJanvier;
                     // afficher un message
                     echo '<h1 style="text-align: center; color: white";> Bonjour '.$user. ', voici votre graphique de consommation annuelle ! </h1>';
-                    echo '<h1 style="text-align: center; color: white";> Le calcul donne '.$sommeConso. ' ! </h1>';
+                    
 					
                 }
             ?>
@@ -156,13 +156,12 @@ function drawBasic() {
 
   var data = google.visualization.arrayToDataTable([
          ['Sector', 'Production (TWh) ', { role: 'style' }],
-         ['Nuclear', 335.4, '#e4a700'],            
-         ['Hydro', 65.1, '#2571BO'],           
-         ['Wind', 39.7, '#72CBB7'],
-         ['Thermic', 37.6, '#F20808' ], 
-         ['Solar', 12.6, '#D66B0E'],           
-         ['BioEnergy', 9.6, '#146856'],
-      ]);
+         ['Nuclear', (0,671*<?php echo $sommeConso; ?>), '#e4a700'],            
+         ['Hydro', (0,13*<?php echo $sommeConso; ?>), '#2571BO'],           
+         ['Wind', (0,079*<?php echo $sommeConso; ?>), '#72CBB7'],
+         ['Thermic', (0,075*<?php echo $sommeConso; ?>), '#F20808' ], 
+         ['Solar', (0,025*<?php echo $sommeConso; ?>), '#D66B0E'],           
+         ['BioEnergy', (0,019*<?php echo $sommeConso; ?>), '#146856'], ]);
 
 
       var options = {
