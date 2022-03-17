@@ -94,6 +94,19 @@ float :right; /* Add an active/current color */
   float : left;
 
 }
+
+input[type=button] {
+    background-color: #11181C;
+    color: white;
+    border: none;
+    cursor: pointer;
+	float: right;
+}
+input[type=button]:hover {
+    background-color: white;
+    color: #11181C;
+    border: 1px solid #11181C;
+}
 </style>
 
 
@@ -105,8 +118,10 @@ float :right; /* Add an active/current color */
   <a class="active" href="#">
 
   <a href="#">&#9776;&nbsp;</a> <!-- CODE ASCII POUR MENU -->
-
+ 
   <a href="#"><i class="fa fa-search"></i></a>
+
+  <a href='principale.php?deconnexion=true'><span>Déconnexion</span></a>
 
   <?php
                 session_start();
@@ -115,7 +130,7 @@ float :right; /* Add an active/current color */
 					$userforname = $_SESSION['forname'];
 					$consoJanvier = $_SESSION['consoJanvier'];
                     // afficher un message
-                    echo '<h2 style="text-align: center; color: white";> Bonjour '.$consoJanvier. ', vous êtes connecté à votre compte ! </h2>';
+                    echo '<h2 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes connecté à votre compte ! </h2>';
 					
                 }
             ?>
@@ -132,6 +147,23 @@ else {
 	location.href = 'infoConso.php';
 }
 }  
+
+<?php
+                session_start();
+                if(isset($_GET['deconnexion']))
+                { 
+                   if($_GET['deconnexion']==true)
+                   {  
+                      session_unset();
+                      header("location:carrousel.html");
+                   }
+                }
+                else if($_SESSION['input2'] !== ""){
+                    $user = $_SESSION['name'];
+                    // afficher un message
+                    echo '<h4 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes connecté </h4>';
+                }
+            ?>
 </script>
 
 	</header>
@@ -156,7 +188,7 @@ else {
 		      		<img src="9.png" width="170" height="170" onclick="redirection()">
 		   </div>
 		      <div class="class"> 
-		      		<img src="2.png" width="170" height="170" onclick="window.location.href = 'graph.php';" >
+		      		<img src="2.png" width="170" height="170" >
 		   </div>
 		      <div class="class"> 
 		      	<img src="3.png" width="170" height="170" onclick="window.location.href = 'graphSector.php';">
