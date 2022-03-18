@@ -121,7 +121,7 @@ input[type=button]:hover {
  
   <a href="#"><i class="fa fa-search"></i></a>
 
-  <a href='principale.php?deconnexion=true'><span>Déconnexion</span></a>
+  <a href='pageAcc.php?deconnexion=true'><span>Déconnexion</span></a>
 
   <?php
                 session_start();
@@ -146,7 +146,8 @@ if (<?php echo $consoJanvier; ?> != "0") {
 else {
 	location.href = 'infoConso.php';
 }
-}  
+} 
+</script> 
 
 <?php
                 session_start();
@@ -164,7 +165,7 @@ else {
                     echo '<h4 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes connecté </h4>';
                 }
             ?>
-</script>
+
 
 	</header>
 <body class="body" >
