@@ -105,7 +105,7 @@ float :right; /* Add an active/current color */
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <a class="active" href="#">
-
+  
   <a href="#">&#9776;&nbsp;</a> <!-- CODE ASCII POUR MENU -->
 
   <a href="#"><i class="fa fa-search"></i></a>
@@ -188,6 +188,7 @@ float :right; /* Add an active/current color */
       }
     </script>
     </div>
+    <button  onclick="window.location='infoConso.php'">Modify my values</button>
   </head>
   <body>
     <div id="chart_div" style="width: 100%; height: 500px;"></div>
