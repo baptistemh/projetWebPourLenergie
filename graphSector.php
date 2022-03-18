@@ -172,7 +172,7 @@ function drawBasic() {
             backgroundColor:'#11181C',
   
 
-      }
+     }
 
 
       ;
