@@ -195,7 +195,7 @@ else {
 		      	<img src="3.png" width="170" height="170" onclick="window.location.href = 'graphSector.php';">
 		   </div>
 		      <div class="class"> 
-		      	<img src="4.png" width="170" height="170" >
+		      	<img src="4.png" width="170" height="170" onclick="window.location.href = 'achats.php';">
 		   </div>
 		      <div class="class"> 
 		      	<img src="5.png" width="170" height="170" >
