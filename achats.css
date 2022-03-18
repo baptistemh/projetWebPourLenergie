@@ -1,0 +1,49 @@
+#header {    
+	background-color: #bae1ff;    
+	color: black;
+	height: 20%;   
+	text-align: center;    
+	padding: 5px; 
+	border:2px 
+	solid black; 
+	  } 
+#nav {
+background-color: #ffb3ba;
+height: 60%;
+padding: 5px;
+margin: 5px;
+border:2px 
+solid black;
+
+}
+#footer { 
+background-color: #baffc9;
+height: 20%;
+bottom:0;
+text-align: center;
+border:2px 
+solid black;
+}
+
+#items {
+	display: grid;
+	grid-template-rows: 200px 200px 200px;
+	grid-template-columns: 200px 200px 200px;
+	padding-left: 400px;
+	margin-top: 20px;
+}
+#f1 {
+	border:2px 
+	solid black; 
+}
+
+#f2 {
+	border:2px 
+	solid black; 
+}
+
+#f3 {
+	padding-bottom: 10px;
+	border:2px 
+	solid black; 
+}
