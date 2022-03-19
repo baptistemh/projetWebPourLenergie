@@ -90,7 +90,7 @@ float :right; /* Add an active/current color */
     align-items: flex-end;
 }
 .class {
- width:12,5%;
+ width:20%;
   float : left;
 
 }
@@ -198,31 +198,21 @@ else {
 	<div class="container">
 		 
    <div class="class"> 
-		      		<img src="9.png" width="170" height="170" onclick="redirection()">
+		      		<img src="9.png" width="300" height="300" onclick="redirection()">
 		   </div>
 		      <div class="class"> 
-		      		<img src="2.png" width="170" height="170" >
+		      		<img src="2.png" width="300" height="300" >
 		   </div>
 		      <div class="class"> 
-		      	<img src="3.png" width="170" height="170" onclick="window.location.href = 'graphSector.php';">
+		      	<img src="3.png"width="300" height="300" onclick="window.location.href = 'graphSector.php';">
 		   </div>
 		      <div class="class"> 
-		      	<img src="4.png" width="170" height="170" onclick="window.location.href = 'achats.php';">
+		      	<img src="4.png" width="300" height="300" onclick="window.location.href = 'achats.php';">
 		   </div>
 		      <div class="class"> 
-		      	<img src="5.png" width="170" height="170" onclick="test()">
+		      	<img src="8.png" width="300" height="300" onclick="test()">
 		   </div>
-		      <div class="class"> 
-		      	<img src="6.png" width="170" height="170" >
-		   </div>
-		      <div class="class"> 
-		      	<img src="7.png" width="170" height="170" >
-		   </div>
-		      <div class="class"> 
-		      	<img src="8.png" width="170" height="170" >
-
-		   </div>  
-
+		      
 
 </div>
 <h1> Des millions de données synthétisées pour vous éclairer en toute simplicité</h1>
