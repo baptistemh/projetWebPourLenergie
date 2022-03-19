@@ -126,11 +126,12 @@ input[type=button]:hover {
   <?php
                 session_start();
                 if($_SESSION['input2'] !== ""){
+					$mail = $_SESSION['input2'];
                     $user = $_SESSION['name'];
 					$userforname = $_SESSION['forname'];
 					$consoJanvier = $_SESSION['consoJanvier'];
                     // afficher un message
-                    echo '<h2 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes connecté à votre compte ! </h2>';
+                    echo '<h2 style="text-align: center; color: white";> Bonjour '.$mail. ', vous êtes connecté à votre compte ! </h2>';
 					
                 }
             ?>
@@ -147,6 +148,17 @@ else {
 	location.href = 'infoConso.php';
 }
 } 
+
+function test() {
+ var mail = <?php echo json_encode($mail); ?>; //j'encode le fait que c'est autre chose qu'un nombre (récuperer le type exact de la variable mail)
+if (mail === "aaa") { 
+	location.href = 'manageItem.php';
+} 
+else {
+	alert("Access not allowed");
+	
+}
+}
 </script> 
 
 <?php
@@ -198,7 +210,7 @@ else {
 		      	<img src="4.png" width="170" height="170" onclick="window.location.href = 'achats.php';">
 		   </div>
 		      <div class="class"> 
-		      	<img src="5.png" width="170" height="170" >
+		      	<img src="5.png" width="170" height="170" onclick="test()">
 		   </div>
 		      <div class="class"> 
 		      	<img src="6.png" width="170" height="170" >
