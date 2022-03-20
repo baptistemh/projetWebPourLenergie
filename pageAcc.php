@@ -348,7 +348,5 @@ consumed in France at this very moment, what is the share of wind power in the
    window.open("graph.php");
     } 
     
-    
-    
   }
   </script>
