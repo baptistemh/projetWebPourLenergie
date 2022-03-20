@@ -4,8 +4,8 @@
 	display: grid;
 	grid-template-rows: 200px 200px 200px;
 	grid-template-columns: 200px 200px 200px;
-	padding-left: 400px;
-	margin-top: 20px;
+	margin:0 auto;
+    margin-top:10%;
 }
 #f1 {
 	border:2px 
@@ -20,14 +20,15 @@
 #f3 {
 	padding-bottom: 10px;
 	border:2px 
-	solid black; 
+	solid rgb(0, 0, 0); 
 }
 
 body{
     background: #11181C;
 }
 #container{
-    width:400px;
+    background: yellow;
+    width:800px;
     margin:0 auto;
     margin-top:10%;
 }
