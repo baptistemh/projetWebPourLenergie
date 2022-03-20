@@ -237,7 +237,7 @@ else {
 	<div class="container">
 		 
    <div class="class"> 
-		      		<img src="3.png" width="250" height="170" onclick="redirection()">
+		      		<img src="7.png" width="250" height="170" onclick="redirection()">
 		   </div>
 		      <div class="class"> 
 		      		<img src="2.png" width="250" height="170" >
