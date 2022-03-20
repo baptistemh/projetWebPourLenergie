@@ -116,7 +116,11 @@ slideImg();
           </div>
     </div>
   </div>
-
+  <br>
+          <br>
+          <br>   <br>
+          <br>
+          <br>
 </div>
   <?php
                 session_start();
@@ -216,7 +220,7 @@ function drawBasic() {
 
       <div class="conteneur">
         <p class="colp">
-          ABOUT USS
+          ABOUT US
           <br>
           <br>
           <br>
