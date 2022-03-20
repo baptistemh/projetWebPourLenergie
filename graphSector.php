@@ -85,8 +85,8 @@ float :right; /* Add an active/current color */
 
 .container {
  width:100%;
-  display: flex;
-    align-items: flex-end;
+display: flex;
+ align-items: flex-end;
 }
 .class {
  width:12,5%;

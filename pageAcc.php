@@ -11,9 +11,11 @@ MENU BAR https://forum.alsacreations.com/topic-4-84349-1-Challenge--css-minimal-
 
 
 <title>TP4</title>
+<link rel="stylesheet" href="style.css">
 
 </head>
 <style>
+	
 
 .body{
 		position: relative;
@@ -35,7 +37,10 @@ MENU BAR https://forum.alsacreations.com/topic-4-84349-1-Challenge--css-minimal-
 .contenu{  
 	
 background-color: #11181C;}
-
+.deco{  
+	
+	background-color: #11181C;
+	text-align: center;}
 .header{
 
 background-color: whitesmoke;
@@ -86,13 +91,13 @@ float :right; /* Add an active/current color */
 
 .container {
  width:100%;
-  display: flex;
-    align-items: flex-end;
+display: flex;
+float : left;
+
 }
 .class {
- width:12,5%;
+width:20%;
   float : left;
-
 }
 
 input[type=button] {
@@ -110,34 +115,70 @@ input[type=button]:hover {
 </style>
 
 
-	<header class="header"  >
-		<div class="icon-bar" >
-<img class="logo" src="logo.png" width="50" height="50" >
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <a class="active" href="#">
+<header class="header"  >
+    
 
-  <a href="#">&#9776;&nbsp;</a> <!-- CODE ASCII POUR MENU -->
- 
-  <a href="#"><i class="fa fa-search"></i></a>
+	<div class="icon-bar" >
+	  <img class="logo" src="logo.png" width="50" height="50" >
 
-  <a href='pageAcc.php?deconnexion=true'><span>Déconnexion</span></a>
-
-  <?php
-                session_start();
-                if($_SESSION['input2'] !== ""){
-					$mail = $_SESSION['input2'];
-                    $user = $_SESSION['name'];
-					$userforname = $_SESSION['forname'];
-					$consoJanvier = $_SESSION['consoJanvier'];
-                    // afficher un message
-                    echo '<h2 style="text-align: center; color: white";> Bonjour '.$mail. ', vous êtes connecté à votre compte ! </h2>';
-					
-                }
-            ?>
-            
+	  <div class="wrap">
+		<div class="search">
+		   <input type="text" id="text_a" class="searchTerm"  placeholder="What are you looking for?" onclick="myFunction1()" >
+		   <button type="submit" class="searchButton" onclick="myFunction1()"> 
+			
+			 <i class="fa fa-search"></i>
+			
+		  
 
 </div>
+		  </button>
+		</div>
+	 </div>
+	 
+	 <section class="first">
+	  <div class="second">
+		<div class="content">
+		  <div class="carousel">
+				<div class="slide">
+					<ul class="gallery">
+						<li>P</li>
+						<li>O</li>
+						<li>W</li>
+						<li>E</li>
+						<li>R</li>
+						<li>R</li>
+						<li>A</li>
+						<li>N</li>
+						<li>G</li>
+						<li>E</li>
+						<li>R</li>
+						<li>S</li>
+					</ul>
+				  
+				</div>
+		  </div>
+		</div>
+		
+	  </div>
+	  <div class="deco">
+	  <a href='pageAcc.php?deconnexion=true'><span>Déconnexion</sapi_windows_cp_conv></a>
+<?php
+			  session_start();
+			  if($_SESSION['input2'] !== ""){
+				  $mail = $_SESSION['input2'];
+				  $user = $_SESSION['name'];
+				  $userforname = $_SESSION['forname'];
+				  $consoJanvier = $_SESSION['consoJanvier'];
+				  // afficher un message
+				  
+			  }
+		  ?>
+	  </div>
+	</section>
+	 
+  </header>
+	
+ 
 
 <script>  
 function redirection() {
@@ -198,34 +239,24 @@ else {
 	<div class="container">
 		 
    <div class="class"> 
-		      		<img src="9.png" width="170" height="170" onclick="redirection()">
+		      		<img src="3.png" width="250" height="170" onclick="redirection()">
 		   </div>
 		      <div class="class"> 
-		      		<img src="2.png" width="170" height="170" >
+		      		<img src="2.png" width="250" height="170" >
 		   </div>
 		      <div class="class"> 
-		      	<img src="3.png" width="170" height="170" onclick="window.location.href = 'graphSector.php';">
+		      	<img src="7.png"width="250" height="170" onclick="window.location.href = 'graphSector.php';">
 		   </div>
 		      <div class="class"> 
-		      	<img src="4.png" width="170" height="170" onclick="window.location.href = 'achats.php';">
+		      	<img src="9.png" width="250" height="170" onclick="window.location.href = 'achats.php';">
 		   </div>
 		      <div class="class"> 
-		      	<img src="5.png" width="170" height="170" onclick="test()">
+		      	<img src="8.png" width="250" height="170" onclick="test()">
 		   </div>
-		      <div class="class"> 
-		      	<img src="6.png" width="170" height="170" >
-		   </div>
-		      <div class="class"> 
-		      	<img src="7.png" width="170" height="170" >
-		   </div>
-		      <div class="class"> 
-		      	<img src="8.png" width="170" height="170" >
-
-		   </div>  
-
+		      
 
 </div>
-<h1> Des millions de données synthétisées pour vous éclairer en toute simplicité</h1>
+<h1> Des millions	 de données synthétisées pour vous éclairer en toute simplicité</h1>
 <h4> Courbes et graphiques à visualiser à l’écran, données à télécharger ou à imprimer, décomptes de ce que produisent les installations photovoltaïques, solaires, hydrauliques, thermiques ou nucléaires… Plus de 15 millions de données sont compilées afin de pouvoir vous fournir toutes ces informations et les synthétiser.
 
 Envie de savoir quelle quantité d’électricité est consommée en ce moment même en France, quelle est la part de l’éolien dans la production d’électricité dans votre région, ou encore combien de mégawatts la France échange actuellement avec ses voisins ? À l’heure où nous sommes de plus en plus nombreux à s’interroger sur les enjeux de la transition énergétique et sa mise en œuvre au quotidien, RTE partage toutes les données de l’électricité française avec vous sur votre ordinateur, votre tablette ou votre smartphone.</h4>
