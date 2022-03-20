@@ -8,23 +8,38 @@
 
   <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-  <script >
-      function myFunction1()
-    {
-    var a=document.getElementById("text_a").value;
-    
-    if (a=="importation")
-      {
-     window.open("GraphExport.html");
-      }
-    else
-      {
-      }
-    }
+ 
+<script>
+  function myFunction1()
+  {
+  var a=document.getElementById("text_a").value;
   
+  if (a=="importation")
+    {
+   window.open("GraphImport.html");
+    }
+	else if (a=="exportation")
+    {
+   window.open("GraphExport.html");
+    } 
+	else if (a=="sector")
+    {
+   window.open("graphSector.php");
+    } 
+	else if (a=="conso")
+    {
+   window.open("graph.php");
+    } 
+    
+  }
   </script>
+
   
   <style>
+    .body{
+      position: relative;	
+      background-color: #11181C;
+  }
       .align{
           
           margin-left: auto;
@@ -39,6 +54,9 @@
       color:#0061FE;
       background-color:#11181C;
   }
+  .logo5 {
+      margin-top: 9%;    
+    }
   
   </style>
 <head>
@@ -51,7 +69,7 @@
     
 
 	  <div class="icon-bar" >
-        <img class="logo" src="logo.png" width="50" height="50" >
+      <img class="logo5" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
 
         <div class="wrap">
           <div class="search">
@@ -97,10 +115,6 @@
 
 
 <!-- BODY-->
-
-
-
-
 
 <body class="body" >
     <br>
@@ -309,6 +323,7 @@
 </div>
 </body>
 
+
 <footer class="footer">
     <div class="Global">
         <div class="gauche"> 
@@ -361,9 +376,3 @@
 
 </main>
 </html>
-
-
-
-
-  
-  

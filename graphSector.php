@@ -31,6 +31,10 @@ h1 {
    margin-left:20%;
      width: 100%; 
     }
+    .logo5{
+   
+   margin-top: 2%;
+  }
 </style>
 
 
@@ -38,7 +42,7 @@ h1 {
     
 
   <div class="icon-bar" >
-    <img class="logo" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
+    <img class="logo5" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
       <div class="wrap">
         <div class="search">
            <input type="text" id="text_a" class="searchTerm"  placeholder="What are you looking for?" onclick="myFunction1()" >
@@ -122,6 +126,7 @@ slideImg();
           <br>
           <br>
 </div>
+<body class="body" >
   <?php
                 session_start();
                 if($_SESSION['input2'] !== ""){
@@ -154,7 +159,10 @@ slideImg();
   </header>
 <div>
   <html>
+    
   <div class="maps">
+ 
+
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -193,12 +201,13 @@ function drawBasic() {
     }
     </script>
   </head>
-  <body>
+
+
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
-  </body>
+  
 </div>
 </html>
-    <body>
+  
       <div id="chart_div" style="width: 100%; height: 500px;  "></div>
     </body>
 

@@ -97,6 +97,7 @@ float :right; /* Add an active/current color */
 .graph {
   background-color: #11181C; 
 }
+
 </style>
 
 
@@ -104,7 +105,7 @@ float :right; /* Add an active/current color */
     
 
 	  <div class="icon-bar" >
-      <img class="logo" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
+      <img class="logo5" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
         <div class="wrap">
           <div class="search">
              <input type="text" id="text_a" class="searchTerm"  placeholder="What are you looking for?" onclick="myFunction1()" >
@@ -219,6 +220,7 @@ slideImg();
 <div>
 
 <html>
+<body class="body" >
   <head>
   <div class="graph">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -264,10 +266,10 @@ slideImg();
         chart.draw(data, options);
       }
     </script>
-    </div>
+  
     <button  onclick="window.location='infoConso.php'">Modify my values</button>
   </head>
-  <body>
+
     <div id="chart_div" style="width: 100%; height: 500px;"></div>
   </body>
 </html>

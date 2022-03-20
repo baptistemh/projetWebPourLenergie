@@ -8,21 +8,30 @@
 
   <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-  <script >
-      function myFunction1()
+  <script>
+    function myFunction1()
     {
     var a=document.getElementById("text_a").value;
     
     if (a=="importation")
       {
-     window.open("GraphExport.html");
+     window.open("GraphImport.html");
       }
-    else
+    else if (a=="exportation")
       {
-      }
+     window.open("GraphExport.html");
+      } 
+    else if (a=="sector")
+      {
+     window.open("graphSector.php");
+      } 
+    else if (a=="conso")
+      {
+     window.open("graph.php");
+      } 
+      
     }
-  
-  </script>
+    </script>
   
   <style>
       .align{
@@ -39,7 +48,7 @@
       color:#f0940a;
       background-color:#11181C;
   }
-  
+
   </style>
 <head>
 
@@ -51,7 +60,7 @@
     
 
 	  <div class="icon-bar" >
-        <img class="logo" src="logo.png" width="50" height="50" >
+      <img class="logo5" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
 
         <div class="wrap">
           <div class="search">
@@ -110,7 +119,7 @@
     <br>
     <br>
     <center>
-    <h2>Our Story ... A VENIR LES BOYS</h2>
+    <h2>Our Story ... It's coming don't worry</h2>
     </center>
            
     <div class ="align">
@@ -118,6 +127,22 @@
         
       <br> 
       
+      <br><br><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>  <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>  <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
 	
     
     </div>
