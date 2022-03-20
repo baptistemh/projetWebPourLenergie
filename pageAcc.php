@@ -229,9 +229,9 @@ else {
 		<div class="titre">
 			<br> 
 			<br> 
-			<h5><font color="white"> Accueil
- ÉCO2MIX - Toutes les données de l'électricité en temps réel</h5> 
-		<h1><font color="white"> ÉCO2mix - Toutes les données de l'électricité en temps réel</h1> 
+			<h5 align="center"><font color="white"> Home
+			ECO2MIX - All electricity data in real time</h5> 
+		<h1 align="center" ><font color="white"> ECO2MIX - All electricity data in real time</h1> 
 			<br> 
 			<br> 
 	</div>
@@ -258,10 +258,18 @@ else {
 		      
 
 </div>
-<h1> Des millionS	 de données synthétisées pour vous éclairer en toute simplicité</h1>
-<h4> Courbes et graphiques à visualiser à l’écran, données à télécharger ou à imprimer, décomptes de ce que produisent les installations photovoltaïques, solaires, hydrauliques, thermiques ou nucléaires… Plus de 15 millions de données sont compilées afin de pouvoir vous fournir toutes ces informations et les synthétiser.
+<h1 align="center"> Millions of synthesised data to make it easy for you to understand</h1>
+<h4> Curves and graphs to view on screen, data to download or print, breakdowns of what photovoltaic, solar, hydraulic, thermal or nuclear installations produce... More than 15 million data are compiled in order to provide you with all this information and to summarise it.
 
-Envie de savoir quelle quantité d’électricité est consommée en ce moment même en France, quelle est la part de l’éolien dans la production d’électricité dans votre région, ou encore combien de mégawatts la France échange actuellement avec ses voisins ? À l’heure où nous sommes de plus en plus nombreux à s’interroger sur les enjeux de la transition énergétique et sa mise en œuvre au quotidien, RTE partage toutes les données de l’électricité française avec vous sur votre ordinateur, votre tablette ou votre smartphone.</h4>
+Want to know how much electricity is being consumed 
+consumed in France at this very moment, what is the share of wind power in the
+ production in your region, or how many megawatts of electricity France is currently
+  France is currently trading with its neighbours? At a time when more and more of us are
+   more and more of us are wondering about the challenges of the energy transition 
+   transition and its implementation on a daily basis, RTE is sharing all the data on French electricity with you
+    of French electricity with you on your computer, your tablet or your smartphone.
+
+</h4>
 
 </body>
 <footer class="footer">
@@ -325,10 +333,22 @@ Envie de savoir quelle quantité d’électricité est consommée en ce moment m
   
   if (a=="importation")
     {
-   window.open("GraphExport.html");
+   window.open("GraphImport.html");
     }
-  else
+	else if (a=="exportation")
     {
-    }
+   window.open("GraphExport.html");
+    } 
+	else if (a=="sector")
+    {
+   window.open("graphSector.php");
+    } 
+	else if (a=="conso")
+    {
+   window.open("graph.php");
+    } 
+    
+    
+    
   }
   </script>
