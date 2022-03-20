@@ -19,12 +19,13 @@
 
 .body{
 		position: relative;
-		
+	
 	background-color: #11181C;
 }
 .mapouter
 {
 		width: 300px;
+
 }
 .logo2
 {
@@ -45,7 +46,6 @@ background-color: whitesmoke;
 
 
 .main{
-	
 background-color: #11181C;
 }
 
@@ -207,7 +207,7 @@ slideImg();
                     $consoNovembre = $_SESSION['consoNovembre'];
                     $consoDecembre = $_SESSION['consoDecembre'];
                     // afficher un message
-                    echo '<h1 style="text-align: center; color: white";> Hello '.$user. ', here is your annual consumption graph !! </h1>';
+                    echo '<h1 style="text-align: center; color: white";> Hello '.$user. ', here is your annual consumption graph ! </h1>';
 					
                 }
             ?>
@@ -272,14 +272,7 @@ slideImg();
   </body>
 </html>
 
-	<footer class="footer">
-<div class="Global">
-   <div class="gauche"> 
-
-    
-   
-
-
+	
    <footer class="footer">
     <div class="Global">
         <div class="gauche"> 
