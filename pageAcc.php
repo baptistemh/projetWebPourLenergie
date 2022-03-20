@@ -91,11 +91,10 @@ float :right; /* Add an active/current color */
 
 .container {
  width:100%;
-  display: flex;
-    align-items: flex-end;
+display: flex;
 }
 .class {
-	
+width:20%;
   float : left;
 }
 
@@ -255,7 +254,7 @@ else {
 		      
 
 </div>
-<h1> Des millions	 de données synthétisées pour vous éclairer en toute simplicité</h1>
+<h1> Des millionS	 de données synthétisées pour vous éclairer en toute simplicité</h1>
 <h4> Courbes et graphiques à visualiser à l’écran, données à télécharger ou à imprimer, décomptes de ce que produisent les installations photovoltaïques, solaires, hydrauliques, thermiques ou nucléaires… Plus de 15 millions de données sont compilées afin de pouvoir vous fournir toutes ces informations et les synthétiser.
 
 Envie de savoir quelle quantité d’électricité est consommée en ce moment même en France, quelle est la part de l’éolien dans la production d’électricité dans votre région, ou encore combien de mégawatts la France échange actuellement avec ses voisins ? À l’heure où nous sommes de plus en plus nombreux à s’interroger sur les enjeux de la transition énergétique et sa mise en œuvre au quotidien, RTE partage toutes les données de l’électricité française avec vous sur votre ordinateur, votre tablette ou votre smartphone.</h4>
