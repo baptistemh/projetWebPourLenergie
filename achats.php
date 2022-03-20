@@ -17,6 +17,10 @@ if (!$conn) {
 
 echo "Connexion réussie"."<br/>";
 
+$buyingItem1 = $_POST["buyingItem1"];
+$buyingItem2 = $_POST["buyingItem2"];
+$buyingItem3 = $_POST["buyingItem3"];
+
 $requete = "SELECT count(*) FROM item where id = '1' ";
         $exec_requete = mysqli_query($conn,$requete);
         $reponse      = mysqli_fetch_array($exec_requete);
@@ -30,6 +34,21 @@ $requete = "SELECT count(*) FROM item where id = '1' ";
           $nbItem2 = $reponse2->nbItem2;
           $nbItem3 = $reponse2->nbItem3;
         }
+
+        if($_POST['button2']){
+            $nbItem1 = $nbItem1 - $buyingItem1;
+            $nbItem2 = $nbItem2 - $buyingItem2;
+            $nbItem3 = $nbItem3 - $buyingItem3;
+   
+            $sql = "UPDATE item SET nbItem1 = '$nbItem1', nbItem2 = '$nbItem2', nbItem3 = '$nbItem3' where id = '1' ";
+            if (mysqli_query($conn, $sql)) {
+                  echo "Nouvelle modification créé avec succès";
+                  $sql = "SELECT nbItem1, nbItem2, nbItem3 from item";
+            } else {
+                  echo "Erreur : " . $sql . "<br>" . mysqli_error($conn);
+            }
+            }
+
 echo $nbItem1;
 
 /*if($_POST['pourItem1']){
@@ -75,6 +94,24 @@ mysqli_close($conn);
 		</center>
 		</div>
 
+        <div id="container">
+            <!-- zone de connexion -->
+            
+            <form method="POST">
+                
+                <label><b>Number of Item 1 you want</b></label>
+                <input type="text" placeholder="Enter the number" name="buyingItem1" required>
+
+                <label><b>Number of Item 2 you want</b></label>
+                <input type="text" placeholder="Enter the number" name="buyingItem2" required>
+
+                <label><b>Number of Item 3 you want</b></label>
+                <input type="text" placeholder="Enter the number" name="buyingItem3" required>
+
+                <input type="submit" id='submit' name="button2" value='VALIDATE' >
+            </form>
+        </div>
+
    </div>
    
 </div>
@@ -87,7 +124,7 @@ mysqli_close($conn);
 
 
      <script type="text/javascript">
-		var f1=0;
+	/*	var f1=0;
 		var f2=0;
 		var f3=0;
         var nombreItem1=<?php echo $nbItem1; ?>;
@@ -97,7 +134,7 @@ mysqli_close($conn);
         /*function moinsUn() { 
             nombreItem1 = nombreItem1 - 1;
             document.getElementById("test").innerHTML=nombreItem1;
-        }*/
+        }
 
 		function total(){
 			var tot = f1+f2+f3; 
@@ -124,9 +161,6 @@ mysqli_close($conn);
             nombreItem1 = nombreItem1 - 1;
             document.getElementById("resteItem1").innerHTML=nombreItem1;
 			total();
-            <?php
-            echo "ca marche";
-            ?>
             
 		}
 		function plusF2(){
@@ -140,8 +174,8 @@ mysqli_close($conn);
             nombreItem3 = nombreItem3 - 1;
             document.getElementById("resteItem3").innerHTML=nombreItem3;
 			total();
-		}
-	</script>
+		} */
+	</script> 
 
 </body>
 
