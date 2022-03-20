@@ -38,6 +38,9 @@ if (isset($_POST['input2']) && isset($_POST['input3'])) {
          $_SESSION['consoOctobre'] = $reponse2->consoOctobre;
          $_SESSION['consoNovembre'] = $reponse2->consoNovembre;
          $_SESSION['consoDecembre'] = $reponse2->consoDecembre;
+         $_SESSION['achatItem1'] = $reponse2->achatItem1;
+         $_SESSION['achatItem2'] = $reponse2->achatItem2;
+         $_SESSION['achatItem3'] = $reponse2->achatItem3;
          header('Location: pageAcc.php');
       } else {
          header('Location: connexion.php?erreur=1'); // utilisateur ou mot de passe incorrect
