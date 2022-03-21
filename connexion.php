@@ -48,6 +48,10 @@ input[type=submit]:hover {
     color: #11181C;
     border: 1px solid #11181C;
 }
+.diminuer
+{
+    margin-top:2%;
+}
 
 </style>
 
@@ -60,15 +64,11 @@ input[type=submit]:hover {
     
 
 	<div class="icon-bar" >
-	<img class="logo" src="logo.png" width="50" height="50">
-
+s
 
 	  <div class="wrap">
 		<div class="search">
-		   <input type="text" id="text_a" class="searchTerm"  placeholder="What are you looking for?" onclick="myFunction1()" >
-		   <button type="submit" class="searchButton" onclick="myFunction1()"> 
-			
-			 <i class="fa fa-search"></i>
+		  
 	
 		  
 
@@ -78,6 +78,7 @@ input[type=submit]:hover {
 	 </div>
 	 
 	 <section class="first">
+     <div class="diminuer"> 
 	  <div class="second">
 		<div class="content">
 		  <div class="carousel">
@@ -102,17 +103,19 @@ input[type=submit]:hover {
 		</div>
 		
 	  </div>
-	 
+</div>
 	  </div>
 	</section>
 	 
   </header>
     <body>
+    
+      
         <div id="container1">
             <!-- zone de connexion -->
             
             <form action="verif.php" method="POST">
-                <h1>Connexion</h1>
+                <h1> Connexion </h1>
                 
                 <label><b>E-mail</b></label>
                 <input type="text" placeholder="Enter your e-mail" name="input2" required>
@@ -131,6 +134,12 @@ input[type=submit]:hover {
             </form>
         </div>
     </body>
+    <br>      <br>
+      <br>
+      <br>
+
+      <br>
+
     <footer class="footer">
     <div class="Global">
         <div class="gauche"> 

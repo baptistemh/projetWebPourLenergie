@@ -230,7 +230,7 @@ slideImg();
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Months', 'Expenses'],
+          ['Months', 'Conso'],  
           ['January',     <?php echo $consoJanvier; ?> ],
           ['February',     <?php echo $consoFevrier; ?>],
           ['March',      <?php echo $consoMars; ?>],

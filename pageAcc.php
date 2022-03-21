@@ -12,8 +12,36 @@ MENU BAR https://forum.alsacreations.com/topic-4-84349-1-Challenge--css-minimal-
 
 <title>TP4</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
+
+
+<script>
+  function myFunction1()
+  {
+  var a=document.getElementById("text_a").value;
+  
+  if (a=="importation")
+    {
+   window.open("GraphImport.html");
+    }
+	else if (a=="exportation")
+    {
+   window.open("GraphExport.html");
+    } 
+	else if (a=="sector")
+    {
+   window.open("graphSector.php");
+    } 
+	else if (a=="conso")
+    {
+   window.open("graph.php");
+    } 
+    
+  }
+  </script>
 <style>
 	
 
@@ -46,10 +74,7 @@ background-color: #11181C;}
 background-color: whitesmoke;
  }
 
-.footer{
 
-background-color: #11181C;
-}
 .main{
 	
 background-color: #11181C;
@@ -89,13 +114,13 @@ float :left; /* Add an active/current color */
 float :right; /* Add an active/current color */
 }
 
-.container {
+.container7 {
  width:100%;
 display: flex;
 float : left;
 
 }
-.class {
+.class7 {
 width:20%;
   float : left;
 }
@@ -161,7 +186,7 @@ input[type=button]:hover {
 		
 	  </div>
 	  <div class="deco">
-	  <a href='pageAcc.php?deconnexion=true'><span>Déconnexion</sapi_windows_cp_conv></a>
+	  <a href='pageAcc.php?deconnexion=true'><span>Logout	 </sapi_windows_cp_conv></a>
 <?php
 			  session_start();
 			  if($_SESSION['input2'] !== ""){
@@ -186,14 +211,14 @@ if (<?php echo $consoJanvier; ?> != "0") {
 	location.href = 'graph.php';
 } 
 else {
-	location.href = 'infoConso.php';
+	location.href = 'item.php';
 }
 } 
 
 function test() {
  var mail = <?php echo json_encode($mail); ?>; //j'encode le fait que c'est autre chose qu'un nombre (récuperer le type exact de la variable mail)
-if (mail === "aaa") { 
-	location.href = 'manageItem.php';
+if (mail === "aaa@gmail.com") { 	
+	location.href = 'item.php';
 } 
 else {
 	alert("Access not allowed");
@@ -214,7 +239,7 @@ else {
                 else if($_SESSION['input2'] !== ""){
                     $user = $_SESSION['name'];
                     // afficher un message
-                    echo '<h4 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes connecté </h4>';
+                    echo '<h4 style="text-align: center; color: white";> Hello '.$user. ', you are connected</h4>';
                 }
             ?>
 
@@ -227,65 +252,115 @@ else {
 		<div class="titre">
 			<br> 
 			<br> 
-			<h5><font color="white"> Accueil
- éCO2mix - Toutes les données de l'électricité en temps réel</h5> 
-		<h1><font color="white"> ÉCO2mix - Toutes les données de l'électricité en temps réel</h1> 
+			<h5 style="text-align: center"><font color="white"> Home
+ éCO2mix - All electricity data in real time</h5> 
+		<h1 style="text-align: center" ><font color="white"> Home
+ éCO2mix - All electricity data in real time</h1> 
 			<br> 
 			<br> 
 	</div>
 
 	</div>
-	<div class="container">
+	<div class="container7">
 		 
-   <div class="class"> 
+   <div class="class7"> 
 		      		<img src="3.png" width="250" height="170" onclick="redirection()">
 		   </div>
-		      <div class="class"> 
-		      		<img src="2.png" width="250" height="170" >
+		      <div class="class7"> 
+		      		<img src="2.png" width="250" height="170" onclick="window.location.href = 'GraphImport.html';">
 		   </div>
-		      <div class="class"> 
+		      <div class="class7"> 
 		      	<img src="7.png"width="250" height="170" onclick="window.location.href = 'graphSector.php';">
 		   </div>
-		      <div class="class"> 
+		      <div class="class7"> 
 		      	<img src="9.png" width="250" height="170" onclick="window.location.href = 'achats.php';">
 		   </div>
-		      <div class="class"> 
+		      <div class="class7"> 
 		      	<img src="8.png" width="250" height="170" onclick="test()">
 		   </div>
 		      
 
 </div>
-<h1> Des millions	 de données synthétisées pour vous éclairer en toute simplicité</h1>
-<h4> Courbes et graphiques à visualiser à l’écran, données à télécharger ou à imprimer, décomptes de ce que produisent les installations photovoltaïques, solaires, hydrauliques, thermiques ou nucléaires… Plus de 15 millions de données sont compilées afin de pouvoir vous fournir toutes ces informations et les synthétiser.
+<h1 style="text-align: center"> Millions of data synthesized to easily enlighten you</h1>
+<h4> Curves and graphs to view on the screen, data to download or print, counts of what photovoltaic, solar, hydraulic, thermal or nuclear installations produce... More than 15 million data are compiled in order to be able to provide you with all this information and synthesize them.
 
-Envie de savoir quelle quantité d’électricité est consommée en ce moment même en France, quelle est la part de l’éolien dans la production d’électricité dans votre région, ou encore combien de mégawatts la France échange actuellement avec ses voisins ? À l’heure où nous sommes de plus en plus nombreux à s’interroger sur les enjeux de la transition énergétique et sa mise en œuvre au quotidien, RTE partage toutes les données de l’électricité française avec vous sur votre ordinateur, votre tablette ou votre smartphone.</h4>
+Want to know how much electricity is being consumed right now?
+ in France, what is the share of wind power in the production of electricity in
+  your region, or how many megawatts France currently exchanges with
+   his neighbors ? At a time when more and more of us are wondering about
+    the challenges of the energy transition and its daily implementation, RTE shares
+all French electricity data with you on your computer, tablet or smartphone.
+</h4>
 
 </body>
-	<footer class="footer">
-<div class="Global">
-   <div class="gauche"> 
 
-    
-   
+<footer class="footer">
+    <div class="Global">
+        <div class="gauche">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="600" height="500" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=15%20quai%20de%20grenelle&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
 
-<div class="mapouter">
-	<div class="gmap_canvas">
-		<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=15%20quai%20de%20grenelle&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-			
-		</iframe><a href="https://123movies-to.org"></a><br>
-		<style>.mapouter{position:relative;text-align:right;height:300px;width:400px;margin-right: 200px;}</style>
-		<a href="https://www.embedgooglemap.net">embed maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;margin-right: 200px;}
-	</style>
+                    </iframe><a href="https://123movies-to.org"></a><br>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 170px;
+                            width: 360px;
+                            margin-right: 200px;
+                        }
+                    </style>
+                    <a href="https://www.embedgooglemap.net">embed maps on website</a>
+                    <style>
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 150px;
+                            width: 350px;
+                            margin-right: 200px;
+                        }
+                    </style>
 
-</div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
 
-<div class="droite">  
-	<img class="logo2" src="logo.png" width="300" height="300" >
-</div>
-</div>
-	</footer>
+        <div class="conteneur">
+            <p class="colp">
+                ABOUT US
+                <br>
+                <br>
+                <br>
+                <a href="AboutUs.html" style="color: white;">Who are we?</a>
+                <br>
+                <br>
+                <a href="ourstory.html" style="color: white;">Our Story</a>
+            </p>
+            <p class="colp">
+                OTHER
+                <br>
+                <br>
+                <br>
+                <a href="legalnotice.html" style="color: white;">Legal notice</a>
+                <br>
+                <br>
+                <a href="PDMP.html" style="color: white;">Personal data management policy</a>
+            </p>
+            <p class="colp">
+                SOCIAL NETWORKS
+                <br>
+                <br>
+                <img src="rss.png" width="180" height="100" alt="contact">
+
+            </p>
+        </div>
+
+
+    </div>
+</footer>
 
 </main>
 </html>

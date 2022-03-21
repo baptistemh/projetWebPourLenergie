@@ -140,7 +140,7 @@ slideImg();
     if ($_POST['button2']) {
 
         if (($nbItem1 == '0' && $buyingItem1 != '0') || ($nbItem2 == '0' && $buyingItem2 != '0') || ($nbItem3 == '0' && $buyingItem3 != '0') || ($buyingItem3 > $nbItem3) || ($buyingItem1 > $nbItem1) || ($buyingItem2 > $nbItem2)){
-            echo '<h2 style="text-align: center; color: white";>Erreur bouffon </h2>';
+            echo '<h2 style="text-align: center; color: white";>Not enough products for one or more item</h2>';
         }
         else {
     
@@ -179,22 +179,22 @@ slideImg();
         <div id="items1">
             <div id="f1">
                 <center>
-                    <img src="Thib.jpeg" width="150" height="150">
-                    <button value="bouquet" id="one" onclick="plusF1()">ITEM 1<br>2€ il en reste <?php echo $nbItem1; ?></button>
+                    <img src="goodies1.png" width="150" height="150">
+                    <button value="bouquet" id="one" onclick="plusF1()">ITEM 1<br>in stock :<?php echo $nbItem1; ?></button>
                 </center>
             </div>
 
             <div id="f2">
                 <center>
-                    <img src="Charlotte.jpeg" width="150" height="150">
-                    <button value="bouquet" id="two" onclick="plusF2()">ITEM 2<br>2€ il en reste <?php echo $nbItem2; ?></button>
+                    <img src="goodies2.png" width="150" height="150">
+                    <button value="bouquet" id="two" onclick="plusF2()">ITEM 2<br>in stock : <?php echo $nbItem2; ?></button>
                 </center>
             </div>
 
             <div id="f3">
                 <center>
-                    <img src="Baptiste.jpeg" width="150" height="150">
-                    <button value="bouquet" id="three" onclick="plusF3()">ITEM 3<br>2€ il en reste <?php echo $nbItem3; ?></button>
+                    <img src="goodies3.png" width="150" height="150">
+                    <button value="bouquet" id="three" onclick="plusF3()">ITEM 3<br>in stock :<?php echo $nbItem3; ?></button>
                 </center>
             </div>
 
