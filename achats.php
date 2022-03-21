@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <div id="block">
+        
     <?php
     session_start();
 
@@ -120,7 +122,7 @@
         </div>
 
     </div>
-
+</div>
 </body>
 
 </html>

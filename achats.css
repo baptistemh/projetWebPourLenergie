@@ -27,8 +27,7 @@ body{
     background: #11181C;
 }
 #container{
-    background: yellow;
-    width:800px;
+    width:600px;
     margin:0 auto;
     margin-top:10%;
 }
@@ -45,6 +44,11 @@ form {
     margin: 0 auto;
     padding-bottom: 10px;
 }
+
+#items{ 
+    float:right;
+}
+
 
 /* Full-width inputs */
 input[type=text], input[type=password] {
