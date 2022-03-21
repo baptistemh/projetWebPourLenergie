@@ -106,6 +106,7 @@
                 echo "Erreur : " . $sql . "<br>" . mysqli_error($conn);
             }
         }
+        header('Location: carrousel.html');
     }
 
     mysqli_close($conn);
