@@ -54,6 +54,11 @@ form {
     padding-bottom: 10px;
 }
 
+#items{ 
+    float:right;
+}
+
+
 /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 100%;

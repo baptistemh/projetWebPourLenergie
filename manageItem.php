@@ -166,6 +166,7 @@ if (mysqli_query($conn, $sql)) {
       echo "Erreur : " . $sql . "<br>" . mysqli_error($conn);
 }
 }
+header('Location: pageAcc.php');
 
 
 mysqli_close($conn);

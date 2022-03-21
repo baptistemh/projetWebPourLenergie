@@ -218,7 +218,7 @@ slideImg();
         </div>
 
     </div>
-
+</div>
 </body>
 <footer class="footer">
   <div class="Global">
