@@ -175,22 +175,31 @@ if (!$conn) {
 
 
 
-$sql = "SELECT consoJanvier, consoFevrier, consoMars, consoAvril, consoMai, consoJuin, consoJuillet, consoAout, consoSeptembre, consoOctobre, consoNovembre, consoDecembre from pageDeCo";
-
 if($_POST['button1']){
 
     $sql = "UPDATE pageDeCo SET consoJanvier = '$consoJanvier', consoFevrier = '$consoFevrier', consoMars = '$consoMars', consoAvril = '$consoAvril', consoMai = '$consoMai', consoJuin = '$consoJuin', consoJuillet = '$consoJuillet', consoAout = '$consoAout', consoSeptembre = '$consoSeptembre', consoOctobre = '$consoOctobre', consoNovembre = '$consoNovembre', consoDecembre = '$consoDecembre' where mail = '".$email."' ";
     if (mysqli_query($conn, $sql)) {
-      echo "Nouveau enregistrement créé avec succès";
-      $sql = "SELECT consoJanvier, consoFevrier, consoMars, consoAvril, consoMai, consoJuin, consoJuillet, consoAout, consoSeptembre, consoOctobre, consoNovembre, consoDecembre from pageDeCo";
-} else {
-      echo "Erreur : " . $sql . "<br>" . mysqli_error($conn);
+        echo "Nouveau enregistrement créé avec succès";
+        $_SESSION['consoJanvier'] = $consoJanvier;
+        $_SESSION['consoFevrier'] = $consoFevrier;
+        $_SESSION['consoMars'] = $consoMars;
+        $_SESSION['consoAvril'] = $consoAvril;
+        $_SESSION['consoMai'] = $consoMai;
+        $_SESSION['consoJuin'] = $consoJuin;
+        $_SESSION['consoJuillet'] = $consoJuillet;
+        $_SESSION['consoAout'] = $consoAout;
+        $_SESSION['consoSeptembre'] = $consoSeptembre;
+        $_SESSION['consoOctobre'] = $consoOctobre;
+        $_SESSION['consoNovembre'] = $consoNovembre;
+        $_SESSION['consoDecembre'] = $consoDecembre;
+        header('Location: pageAcc.php');
+    } else {
+        echo "Erreur : " . $sql . "<br>" . mysqli_error($conn);
 }
 }
 
 
 mysqli_close($conn);
-
 ?>
 
         <div id="container">

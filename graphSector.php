@@ -145,7 +145,7 @@ slideImg();
                     $consoOctobre = $_SESSION['consoOctobre'];
                     $consoNovembre = $_SESSION['consoNovembre'];
                     $consoDecembre = $_SESSION['consoDecembre'];
-                    $sommeConso = $consoDecembre + $consoNovembre + $consoOctobre +$consoSeptembre + $consoAout +$consoJuillet + $consoJuin +$consoMai + $consoAvril +$consoMars + $consoFevrier + $consoJanvier;
+                    $sommeConso = $consoDecembre + $consoNovembre + $consoOctobre + $consoSeptembre + $consoAout +$consoJuillet + $consoJuin + $consoMai + $consoAvril +$consoMars + $consoFevrier + $consoJanvier;
                     // afficher un message
                     echo '<h1 style="text-align: center; color: white";> Bonjour '.$user. ', voici votre graphique de consommation annuelle ! </h1>';
                     
