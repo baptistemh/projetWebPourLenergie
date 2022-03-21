@@ -31,10 +31,10 @@ h1 {
    margin-left:20%;
      width: 100%; 
     }
-    .logo5{
+        .logo5{
    
-   margin-top: 2%;
-  }
+     margin-top: 2%;
+    }
 </style>
 
 
