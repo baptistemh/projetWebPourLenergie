@@ -179,7 +179,7 @@ $sql = "SELECT consoJanvier, consoFevrier, consoMars, consoAvril, consoMai, cons
 
 if($_POST['button1']){
 
-    $sql = "UPDATE pageDeCo SET consoJanvier = '$consoJanvier', consoFevrier = '$consoFevrier', consoMars = '$consoMars', consoAvril = '$consoAvril', consoMai = '$consoMai', consoJuin = '$consoJuin', consoJuillet = '$consoJuillet', consoAout = '$consoAout', consoSeptembre = '$consoSeptembre', consoOctobre = '$consoOctobre', consoNovembre = '$consoNovembre', consoDecembre = '$consoDecembre' ... where mail = '".$email."' ";
+    $sql = "UPDATE pageDeCo SET consoJanvier = '$consoJanvier', consoFevrier = '$consoFevrier', consoMars = '$consoMars', consoAvril = '$consoAvril', consoMai = '$consoMai', consoJuin = '$consoJuin', consoJuillet = '$consoJuillet', consoAout = '$consoAout', consoSeptembre = '$consoSeptembre', consoOctobre = '$consoOctobre', consoNovembre = '$consoNovembre', consoDecembre = '$consoDecembre' where mail = '".$email."' ";
     if (mysqli_query($conn, $sql)) {
       echo "Nouveau enregistrement créé avec succès";
       $sql = "SELECT consoJanvier, consoFevrier, consoMars, consoAvril, consoMai, consoJuin, consoJuillet, consoAout, consoSeptembre, consoOctobre, consoNovembre, consoDecembre from pageDeCo";

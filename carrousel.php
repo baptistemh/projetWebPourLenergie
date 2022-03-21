@@ -2,7 +2,7 @@
 <style>
 .logo5{
    
-   margin-top: 4%;
+   margin-top: 3%;
   }
 
 </style>
@@ -126,7 +126,7 @@ slideImg();
   <div class="titre">
 			
     <center>
-    <h1><font color="white"> Track your electricity consumption and production in real time</h1>
+    <h1><font color="white"> Track your electricity consumption and production in real time !</h1>
 
       <h4><font color="white">ECO2mix is an easy-to-use tool created by RTE to help consumers better 
               understand and consume electricity. Available free of charge on the Internet and via an application 
