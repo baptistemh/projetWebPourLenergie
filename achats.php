@@ -50,6 +50,13 @@
     }
 
     if ($_POST['button2']) {
+
+        if (($nbItem1 == '0' && $buyingItem1 != '0') || ($nbItem2 == '0' && $buyingItem2 != '0') || ($nbItem3 == '0' && $buyingItem3 != '0') || ($buyingItem3 > $nbItem3) || ($buyingItem1 > $nbItem1) || ($buyingItem2 > $nbItem2)){
+            echo '<h2 style="text-align: center; color: white";>Erreur bouffon </h2>';
+        }
+        else {
+    
+
         $nbItem1 = $nbItem1 - $buyingItem1;
         $nbItem2 = $nbItem2 - $buyingItem2;
         $nbItem3 = $nbItem3 - $buyingItem3;
@@ -57,6 +64,9 @@
         $achatItem1 = $achatItem1 + $buyingItem1;
         $achatItem2 = $achatItem2 + $buyingItem2;
         $achatItem3 = $achatItem3 + $buyingItem3;
+
+        
+
 
         $sql = "UPDATE item SET nbItem1 = '$nbItem1', nbItem2 = '$nbItem2', nbItem3 = '$nbItem3' where id = '1' ";
         if (mysqli_query($conn, $sql)) {
@@ -72,7 +82,7 @@
             echo "Erreur : " . $sql2 . "<br>" . mysqli_error($conn);
         }
     }
-
+}
     mysqli_close($conn);
 
     ?>

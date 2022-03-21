@@ -193,7 +193,7 @@ else {
 
 function test() {
  var mail = <?php echo json_encode($mail); ?>; //j'encode le fait que c'est autre chose qu'un nombre (récuperer le type exact de la variable mail)
-if (mail === "aaa") { 
+if (mail === "aaa@gmail.com") { 
 	location.href = 'manageItem.php';
 } 
 else {
