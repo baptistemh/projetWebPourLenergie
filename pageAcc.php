@@ -12,11 +12,10 @@ MENU BAR https://forum.alsacreations.com/topic-4-84349-1-Challenge--css-minimal-
 
 <title>TP4</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <style>
-
+	
 
 .body{
 		position: relative;
@@ -31,7 +30,6 @@ MENU BAR https://forum.alsacreations.com/topic-4-84349-1-Challenge--css-minimal-
 {
 		width: 300px;
 }
-
 .titre {
     margin-left: auto;
     margin-right: auto;
@@ -48,7 +46,10 @@ background-color: #11181C;}
 background-color: whitesmoke;
  }
 
+.footer{
 
+background-color: #11181C;
+}
 .main{
 	
 background-color: #11181C;
@@ -88,15 +89,14 @@ float :left; /* Add an active/current color */
 float :right; /* Add an active/current color */
 }
 
-.container1 {
+.container {
  width:100%;
 display: flex;
 float : left;
 
 }
-.class1 {
+.class {
 width:20%;
-flex: 2 200%;
   float : left;
 }
 
@@ -119,8 +119,7 @@ input[type=button]:hover {
     
 
 	<div class="icon-bar" >
-	<img class="logo" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
-
+	  <img class="logo" src="logo.png" width="50" height="50" >
 
 	  <div class="wrap">
 		<div class="search">
@@ -128,7 +127,7 @@ input[type=button]:hover {
 		   <button type="submit" class="searchButton" onclick="myFunction1()"> 
 			
 			 <i class="fa fa-search"></i>
-	
+			
 		  
 
 </div>
@@ -193,7 +192,7 @@ else {
 
 function test() {
  var mail = <?php echo json_encode($mail); ?>; //j'encode le fait que c'est autre chose qu'un nombre (récuperer le type exact de la variable mail)
-if (mail === "aaa@gmail.com") { 
+if (mail === "aaa") { 
 	location.href = 'manageItem.php';
 } 
 else {
@@ -202,7 +201,6 @@ else {
 }
 }
 </script> 
-
 <?php
                 session_start();
                 if(isset($_GET['deconnexion']))
@@ -229,124 +227,68 @@ else {
 		<div class="titre">
 			<br> 
 			<br> 
-			<h5 align="center"><font color="white"> Home
-			ECO2MIX - All electricity data in real time</h5> 
-		<h1 align="center" ><font color="white"> ECO2MIX - All electricity data in real time</h1> 
+			<h5><font color="white"> Accueil
+ éCO2mix - Toutes les données de l'électricité en temps réel</h5> 
+		<h1><font color="white"> ÉCO2mix - Toutes les données de l'électricité en temps réel</h1> 
 			<br> 
 			<br> 
 	</div>
 
 	</div>
-	<div class="container1">
+	<div class="container">
 		 
-   <div class="class1"> 
+   <div class="class"> 
 		      		<img src="3.png" width="250" height="170" onclick="redirection()">
 		   </div>
-
-		    <div class="class1"> 
+		      <div class="class"> 
 		      		<img src="2.png" width="250" height="170" >
 		   </div>
-		    <div class="class1"> 
+		      <div class="class"> 
 		      	<img src="7.png"width="250" height="170" onclick="window.location.href = 'graphSector.php';">
 		   </div>
-		 <div class="class1"> 
+		      <div class="class"> 
 		      	<img src="9.png" width="250" height="170" onclick="window.location.href = 'achats.php';">
 		   </div>
-		      <div class="class1"> 
+		      <div class="class"> 
 		      	<img src="8.png" width="250" height="170" onclick="test()">
 		   </div>
 		      
 
 </div>
-<h1 align="center"> Millions of synthesised data to make it easy for you to understand</h1>
-<h4> Curves and graphs to view on screen, data to download or print, breakdowns of what photovoltaic, solar, hydraulic, thermal or nuclear installations produce... More than 15 million data are compiled in order to provide you with all this information and to summarise it.
+<h1> Des millions	 de données synthétisées pour vous éclairer en toute simplicité</h1>
+<h4> Courbes et graphiques à visualiser à l’écran, données à télécharger ou à imprimer, décomptes de ce que produisent les installations photovoltaïques, solaires, hydrauliques, thermiques ou nucléaires… Plus de 15 millions de données sont compilées afin de pouvoir vous fournir toutes ces informations et les synthétiser.
 
-Want to know how much electricity is being consumed 
-consumed in France at this very moment, what is the share of wind power in the
- production in your region, or how many megawatts of electricity France is currently
-  France is currently trading with its neighbours? At a time when more and more of us are
-   more and more of us are wondering about the challenges of the energy transition 
-   transition and its implementation on a daily basis, RTE is sharing all the data on French electricity with you
-    of French electricity with you on your computer, your tablet or your smartphone.
-
-</h4>
+Envie de savoir quelle quantité d’électricité est consommée en ce moment même en France, quelle est la part de l’éolien dans la production d’électricité dans votre région, ou encore combien de mégawatts la France échange actuellement avec ses voisins ? À l’heure où nous sommes de plus en plus nombreux à s’interroger sur les enjeux de la transition énergétique et sa mise en œuvre au quotidien, RTE partage toutes les données de l’électricité française avec vous sur votre ordinateur, votre tablette ou votre smartphone.</h4>
 
 </body>
-<footer class="footer">
-    <div class="Global">
-        <div class="gauche"> 
-            <div class="mapouter">
-	            <div class="gmap_canvas">
-		            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=15%20quai%20de%20grenelle&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+	<footer class="footer">
+<div class="Global">
+   <div class="gauche"> 
+
+    
+   
+
+<div class="mapouter">
+	<div class="gmap_canvas">
+		<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=15%20quai%20de%20grenelle&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
 			
-		            </iframe><a href="https://123movies-to.org"></a><br>
-		            <style>.mapouter{position:relative;text-align:right;height:170px;width:360px;margin-right: 200px;}</style>
-		            <a href="https://www.embedgooglemap.net">embed maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:150px;width:350px;margin-right: 200px;}
-	                </style>
+		</iframe><a href="https://123movies-to.org"></a><br>
+		<style>.mapouter{position:relative;text-align:right;height:300px;width:400px;margin-right: 200px;}</style>
+		<a href="https://www.embedgooglemap.net">embed maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;margin-right: 200px;}
+	</style>
 
-                </div>
-            </div>
-        </div>
+</div>
+</div>
+</div>
 
-        <div class="conteneur">
-          <p class="colp">
-            ABOUT US
-            <br>
-            <br>
-            <br>
-            <a href="AboutUs.html">Who are we?</a>
-            <br>
-            <br>
-            <a href="ourstory.html">Our Story</a>
-            </p>
-          <p class="colp">
-            OTHER
-            <br>
-            <br>
-            <br>
-            <a href="legalnotice.html">Legal notice</a>
-            <br>
-            <br>
-            <a href="AboutUs.html">Personal data management policy</a>
-          </p>
-          <p class="colp">
-            SOCIAL NETWORKS
-            <br>
-            <br>
-            <img src="rss.png" width="180" height="100" >
-            
-          </p>
-        </div>
+<div class="droite">  
+	<img class="logo2" src="logo.png" width="300" height="300" >
+</div>
+</div>
+	</footer>
 
-        
-    </div>
-</footer>
 </main>
 </html>
 
 
 
-<script>
-  function myFunction1()
-  {
-  var a=document.getElementById("text_a").value;
-  
-  if (a=="importation")
-    {
-   window.open("GraphImport.html");
-    }
-	else if (a=="exportation")
-    {
-   window.open("GraphExport.html");
-    } 
-	else if (a=="sector")
-    {
-   window.open("graphSector.php");
-    } 
-	else if (a=="conso")
-    {
-   window.open("graph.php");
-    } 
-    
-  }
-  </script>
