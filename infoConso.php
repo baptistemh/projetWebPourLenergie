@@ -51,11 +51,93 @@ input[type=submit]:hover {
 
 </style>
 
-
+<link rel="stylesheet" href="style.css">
     <head>
        <meta charset="utf-8">
     </head>
     <body>
+    <header class="header"  >
+    
+
+    <div class="icon-bar" >
+    <img class="logo5" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
+
+      <div class="wrap">
+       
+     </div>
+
+     
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script >
+
+$(document).ready(function(){
+    $("#Next").click(function(){
+        var currentImg= $('.active');
+        var nextImg= currentImg.next();
+
+        if(nextImg.length){
+            currentImg.removeClass('active').css('z-index',-10);
+            nextImg.addClass('active').css('z-index',10);
+        }
+    });
+
+    $("#Previous").click(function(){
+        var currentImg= $('.active');
+        var prevImg= currentImg.prev();
+
+        if(prevImg.length){
+            currentImg.removeClass('active').css('z-index',-10);
+            prevImg.addClass('active').css('z-index',10);
+        }
+    });
+
+
+
+function slideImg(){
+  setTimeout(function(){ 
+  $("#Next").click();
+  slideImg(); 
+  },2000); 
+}
+
+slideImg(); 
+
+});
+
+</script>
+
+</header>
+
+<section class="first">
+  <div class="second">
+    <div class="content">
+      <div class="carousel">
+            <div class="slide">
+                <ul class="gallery">
+                    <li>P</li>
+                    <li>O</li>
+                    <li>W</li>
+                    <li>E</li>
+                    <li>R</li>
+                    <li>R</li>
+                    <li>A</li>
+                    <li>N</li>
+                    <li>G</li>
+                    <li>E</li>
+                    <li>R</li>
+                    <li>S</li>
+                </ul>
+              
+            </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
 
     <?php
     session_start();
@@ -63,7 +145,7 @@ input[type=submit]:hover {
     if($_SESSION['input2'] !== ""){
         $user = $_SESSION['name'];
         // afficher un message
-        echo '<h2 style="text-align: center; color: white";> Bonjour '.$user. ', vous êtes sur votre espace CONSO ! </h2>';
+        echo '<h2 style="text-align: center; color: white";> Hello '.$user. ', you are in your CONSO area ! </h2>';
         
     }
 
@@ -91,8 +173,7 @@ if (!$conn) {
     die("Échec de la connexion : " . mysqli_connect_error());
 }
 
-echo "Connexion réussie"."<br/>";
-echo '<h4 color: red";> L email est bien '.$email. ', merci ! </h4>';
+
 
 $sql = "SELECT consoJanvier, consoFevrier, consoMars, consoAvril, consoMai, consoJuin, consoJuillet, consoAout, consoSeptembre, consoOctobre, consoNovembre, consoDecembre from pageDeCo";
 
@@ -116,42 +197,42 @@ mysqli_close($conn);
             <!-- zone de connexion -->
             
             <form method="POST">
-                <h1>Entrez vos données de consommation mensuels</h1>
+                <h1>Enter your monthly consumption data</h1>
                 
-                <label><b>Consommation du mois de Janvier (en MW)</b></label>
+                <label><b>Consumption in January (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoJanvier" required>
 
-                <label><b>Consommation du mois de Février (en MW)</b></label>
+                <label><b>Consumption in February (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoFevrier" required>
 
-                <label><b>Consommation du mois de Mars (en MW)</b></label>
+                <label><b>Consumption in March (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoMars" required>
 
-                <label><b>Consommation du mois d'Avril (en MW)</b></label>
+                <label><b>Consumption in April (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoAvril" required>
 
-                <label><b>Consommation du mois de Mai (en MW)</b></label>
+                <label><b>Consumption in May (in KW))</b></label>
                 <input type="text" placeholder="Enter the value" name="consoMai" required>
 
-                <label><b>Consommation du mois de Juin (en MW)</b></label>
+                <label><b>Consumption in June (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoJuin" required>
 
-                <label><b>Consommation du mois de Juillet (en MW)</b></label>
+                <label><b>Consumption in July (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoJuillet" required>
 
-                <label><b>Consommation du mois d'Aout (en MW)</b></label>
+                <label><b>Consumption in August (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoAout" required>
 
-                <label><b>Consommation du mois de Septembre (en MW)</b></label>
+                <label><b>Consumption in September (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoSeptembre" required>
                 
-                <label><b>Consommation du mois de Octobre (en MW)</b></label>
+                <label><b>Consumption in October (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoOctobre" required>
 
-                <label><b>Consommation du mois de Novembre (en MW)</b></label>
+                <label><b>Consumption in November (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoNovembre" required>
 
-                <label><b>Consommation du mois de Decembre (en MW)</b></label>
+                <label><b>Consumption in December (in KW)</b></label>
                 <input type="text" placeholder="Enter the value" name="consoDecembre" required>
 
                 <input type="submit" id='submit' name="button1" value='SAVE' >

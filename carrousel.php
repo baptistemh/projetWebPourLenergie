@@ -1,6 +1,11 @@
 <!DOCTYPE html>
+<style>
+.logo5{
+   
+   margin-top: 4%;
+  }
 
-
+</style>
 <html>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <main class="main">
@@ -17,7 +22,7 @@
     
 
 	  <div class="icon-bar" >
-      <img class="logo" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
+      <img class="logo5" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
         <div class="wrap">
           <div class="search">
              <input type="text" id="text_a" class="searchTerm"  placeholder="What are you looking for?" onclick="myFunction1()" >
