@@ -61,10 +61,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="stylesheet" href="style.css">
     <title>Page de connexion</title>
 
 </head>
+
+<header class="header"  >
+    
+
+    <div class="icon-bar" >
+    <img class="logo5" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
+
+      <div class="wrap">
+       
+     </div>
+
+     
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script >
+
+$(document).ready(function(){
+    $("#Next").click(function(){
+        var currentImg= $('.active');
+        var nextImg= currentImg.next();
+
+        if(nextImg.length){
+            currentImg.removeClass('active').css('z-index',-10);
+            nextImg.addClass('active').css('z-index',10);
+        }
+    });
+
+    $("#Previous").click(function(){
+        var currentImg= $('.active');
+        var prevImg= currentImg.prev();
+
+        if(prevImg.length){
+            currentImg.removeClass('active').css('z-index',-10);
+            prevImg.addClass('active').css('z-index',10);
+        }
+    });
+
+
+
+function slideImg(){
+  setTimeout(function(){ 
+  $("#Next").click();
+  slideImg(); 
+  },2000); 
+}
+
+slideImg(); 
+
+});
+
+</script>
+
+</header>
+
+<section class="first">
+  <div class="second">
+    <div class="content">
+      <div class="carousel">
+            <div class="slide">
+                <ul class="gallery">
+                    <li>P</li>
+                    <li>O</li>
+                    <li>W</li>
+                    <li>E</li>
+                    <li>R</li>
+                    <li>R</li>
+                    <li>A</li>
+                    <li>N</li>
+                    <li>G</li>
+                    <li>E</li>
+                    <li>R</li>
+                    <li>S</li>
+                </ul>
+              
+            </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
 
 
 <body>

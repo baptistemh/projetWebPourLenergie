@@ -6,16 +6,104 @@
     <meta charset="utf-8" />
     <script type="text/javascript"></script>
     <link href="achats.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<main class="main">
+<link rel="stylesheet" href="style.css">
+
+  
 </head>
 
 <body>
+
+	<header class="header"  >
+    
+
+    <div class="icon-bar" >
+    <img class="logo5" src="logo.png" width="50" height="50" onclick="window.location.href = 'pageAcc.php';" >
+
+      <div class="wrap">
+       
+     </div>
+
+     
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script >
+
+$(document).ready(function(){
+    $("#Next").click(function(){
+        var currentImg= $('.active');
+        var nextImg= currentImg.next();
+
+        if(nextImg.length){
+            currentImg.removeClass('active').css('z-index',-10);
+            nextImg.addClass('active').css('z-index',10);
+        }
+    });
+
+    $("#Previous").click(function(){
+        var currentImg= $('.active');
+        var prevImg= currentImg.prev();
+
+        if(prevImg.length){
+            currentImg.removeClass('active').css('z-index',-10);
+            prevImg.addClass('active').css('z-index',10);
+        }
+    });
+
+
+
+function slideImg(){
+  setTimeout(function(){ 
+  $("#Next").click();
+  slideImg(); 
+  },2000); 
+}
+
+slideImg(); 
+
+});
+
+</script>
+
+</header>
+
+<section class="first">
+  <div class="second">
+    <div class="content">
+      <div class="carousel">
+            <div class="slide">
+                <ul class="gallery">
+                    <li>P</li>
+                    <li>O</li>
+                    <li>W</li>
+                    <li>E</li>
+                    <li>R</li>
+                    <li>R</li>
+                    <li>A</li>
+                    <li>N</li>
+                    <li>G</li>
+                    <li>E</li>
+                    <li>R</li>
+                    <li>S</li>
+                </ul>
+              
+            </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
     <?php
     session_start();
 
     if ($_SESSION['input2'] !== "") {
         $user = $_SESSION['name'];
 
-        echo '<h2 style="text-align: center; color: white";> Bonjour ' . $user . ', vous êtes dans le magasin ! </h2>';
+        echo '<h2 style="text-align: center; color: white";> Hello ' . $user . ', you are in the shop !! </h2>';
     }
 
     $conn = mysqli_connect("localhost", "root", "root", "connexion");
@@ -87,8 +175,8 @@
 
     ?>
 
-    <div id="nav">
-        <div id="items">
+    <div id="na1v">
+        <div id="items1">
             <div id="f1">
                 <center>
                     <img src="Thib.jpeg" width="150" height="150">
@@ -110,7 +198,7 @@
                 </center>
             </div>
 
-            <div id="container">
+            <div id="container1">
 
                 <form method="POST">
 
@@ -132,5 +220,54 @@
     </div>
 
 </body>
+<footer class="footer">
+  <div class="Global">
+      <div class="gauche"> 
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=15%20quai%20de%20grenelle&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+    
+              </iframe><a href="https://123movies-to.org"></a><br>
+              <style>.mapouter{position:relative;text-align:right;height:170px;width:360px;margin-right: 200px;}</style>
+              <a href="https://www.embedgooglemap.net">embed maps on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:150px;width:350px;margin-right: 200px;}
+                </style>
+
+              </div>
+          </div>
+      </div>
+
+      <div class="conteneur">
+        <p class="colp">
+          ABOUT US
+          <br>
+          <br>
+          <br>
+          <a href="AboutUs.html"style="color: white;">Who are we?</a>
+          <br>
+          <br>
+          <a href="ourstory.html"style="color: white;">Our Story</a>
+          </p>
+        <p class="colp">
+          OTHER
+          <br>
+          <br>
+          <br>
+          <a href="legalnotice.html"style="color: white;">Legal notice</a>
+          <br>
+          <br>
+          <a href="AboutUs.html"style="color: white;">Personal data management policy</a>
+        </p>
+        <p class="colp">
+          SOCIAL NETWORKS
+          <br>
+          <br>
+          <img src="rss.png" width="180" height="100" >
+          
+        </p>
+      </div>
+
+      
+  </div>
+</footer>
 
 </html>
