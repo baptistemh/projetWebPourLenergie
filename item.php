@@ -162,11 +162,13 @@ $sql = "UPDATE item SET nbItem1 = '$item1', nbItem2 = '$item2', nbItem3 = '$item
 if (mysqli_query($conn, $sql)) {
       echo "Nouvelle modification créé avec succès";
       $sql = "SELECT nbItem1, nbItem2, nbItem3 from item";
-} else {
+      header('Location: pageAcc.php');
+} 
+else {
       echo "Erreur : " . $sql . "<br>" . mysqli_error($conn);
 }
 }
-header('Location: pageAcc.php');
+
 
 
 mysqli_close($conn);
