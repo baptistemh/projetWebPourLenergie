@@ -1,13 +1,20 @@
 
 
-#items {
+#items1 {
 	display: grid;
 	grid-template-rows: 200px 200px 200px;
 	grid-template-columns: 200px 200px 200px;
 	margin:0 auto;
     margin-top:10%;
+margin-left: 30%;
+
+}
+#nav1 {
+    float:right;
 }
 #f1 {
+ float:right;
+
 	border:2px 
 	solid black; 
 }
@@ -26,21 +33,22 @@
 body{
     background: #11181C;
 }
-#container{
-    background: yellow;
+#container1{
+   
     width:800px;
     margin:0 auto;
     margin-top:10%;
 }
 /* Bordered form */
 form {
-    width:100%;
+    width:67%;
     padding: 30px;
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
 }
-#container h1{
+#container1 h1{
     width: 38%;
     margin: 0 auto;
     padding-bottom: 10px;
@@ -69,5 +77,5 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: white;
     color: #11181C;
-    border: 1px solid #11181C;
+  
 }
